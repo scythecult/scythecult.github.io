@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/PlumbRegular.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/PlumbMedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>Мед Спарвки</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__underline">
+      <div class="header__wrap header__wrap--info">
+        <ul class="header__list info">
+          <li class="info__item"><a class="info__link link-hover info__link--current" href="#">Частным лицам</a></li>
+          <li class="info__item"><a class="info__link link-hover" href="#">Организациям</a></li>
+          <li class="info__item"><a class="info__link link-hover info__link--alert" href="#">Справка об отсутсвии COVID
+              19</a></li>
+        </ul>
+        <nav class="header__nav navigation">
+          <a class="navigation__link link-hover" href="#">О компании</a>
+          <a class="navigation__link link-hover" href="#">Филиалы на карте</a>
+          <a class="navigation__link link-hover navigation__link--current" href="#">Услуги и цены</a>
+          <a class="navigation__link link-hover" href="#">Контакты</a>
+        </nav>
+        <ul class="header__location location">
+          <li class="location__item"><a class="location__link link-hover location__link--city" href="#">
+              <img class="location__icon" src="img/location-pin.png" width="24" height="24" alt="Изображение макрера карты">
+              Москва</a></li>
+          <li class="location__item"><a class="location__link link-hover location__link--phone" href="tel:+74956496451">+7 495
+              649-64-51</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="header__wrap header__wrap--service">
+      <button class="header__toggle" type="button">
+        <img class="header__toggle-icon" src="img/menu-menu.png" width="24" height="24" alt="Кнопка открытия меню">
+      </button>
+      <div class="header__logo logo">
+        <img src="img/header-logo.png" width="106" height="45" alt="Логотип медицинской компании">
+      </div>
+      <ul class="header__reference reference">
+        <li class="reference__item reference__item--dropdown-1"><a class="reference__link link-hover" href="#">
+            <img class="reference__icon" src="img/ref-1.jpg" width="30" height="30" alt="Иконка услуг мед. центра">
+            Медицинские справки</a>
+          <ul class="reference__dropdown">
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправка для ГИБДД
+                (форма 003-В/у)
+              </a>
+              <ul class="reference__dropdown reference__dropdown--sub">
+                <li class="reference__dropdown-item"><a class="reference__dropdown-link link-hover" href="#">Справка 003-В/у с
+                    наркологом и психиатром (для ГИБДД)</a></li>
+                <li class="reference__dropdown-item"><a class="reference__dropdown-link link-hover" href="#">Справка 003-В/у для
+                    замены водительского удостоверения</a></li>
+              </ul>
+              <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки">
+            </li>
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправки для работы
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+            <li class="reference__dropdown-item"><a class="reference__dropdown-link link-hover" href="#">Справки для учебы
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправки для иностранных
+                граждан
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправки для отдыхающих
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправки для занятия
+                спортом
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+            <li class="reference__dropdown-item reference__dropdown-item--hasdrop"><a class="reference__dropdown-link link-hover" href="#">Медсправка на оружие
+              </a> <img class="reference__dropdown-icon" src="img/dropdown-arrow.png" width="24" height="24" alt="Изображение стрелки"></li>
+          </ul>
+        </li>
+        <li class="reference__item"><a class="reference__link link-hover" href="#">
+            <img class="reference__icon" src="img/ref-2.jpg" width="30" height="30" alt="Иконка услуг мед. центра">
+            Медицинские книжки</a></li>
+        <li class="reference__item"><a class="reference__link link-hover" href="#">
+            <img class="reference__icon" src="img/ref-3.jpg" width="30" height="30" alt="Иконка услуг мед. центра">
+            Диагностика</a></li>
+        <li class="reference__item ">
+          <a class="reference__link reference__link--worktime link-hover" href="#">
+            <img class="reference__icon" src="img/ref-4.jpg" width="30" height="30" alt="Иконка услуг мед. центра">
+            Время работы: Пн-Пт:
+            с 9:00 до 21:00 Сб-Вс: с 9:00 до 20:00
+          </a>
+        </li>
+      </ul>
+      <a class="header__mobile-phone" href="tel:+74956496451">
+        <img src="img/mobile-phone.png" width="24" height="24" alt="Позвонить нам">
+      </a>
+      <div class="header__mobile-drop mobile-drop">
+        <ul class="mobile-drop__ref-list">
+          <li class="mobile-drop__ref-item"><a class="mobile-drop__ref-link link-hover" href="#">Справка для категорий А, В,
+              (003-в/у)</a></li>
+          <li class="mobile-drop__ref-item"><a class="mobile-drop__ref-link link-hover" href="#">Справка для категорий С, D
+              (003-в/у)</a></li>
+          <li class="mobile-drop__ref-item"><a class="mobile-drop__ref-link link-hover" href="#">Справка 003-в/у с наркологом и
+              психиатром</a></li>
+          <li class="mobile-drop__ref-item"><a class="mobile-drop__ref-link link-hover" href="#">Заключение нарколога и
+              психиатра</a></li>
+          <li class="mobile-drop__ref-item"><a class="mobile-drop__ref-link link-hover" href="#">Электроэнцефалограмма
+              головного мозга</a></li>
+        </ul>
+        <ul class="mobile-drop__diag-list">
+          <li class="mobile-drop__diag-item"><a class="mobile-drop__diag-link link-hover" href="#">Медицинские справки</a>
+          </li>
+          <li class="mobile-drop__diag-item"><a class="mobile-drop__diag-link link-hover" href="#">Медицинские книжки</a></li>
+          <li class="mobile-drop__diag-item"><a class="mobile-drop__diag-link link-hover" href="#">Диагностика</a></li>
+        </ul>
+        <ul class="mobile-drop__info-list">
+          <li class="mobile-drop__info-item"><a class="mobile-drop__info-link link-hover" href="#">Частным лицам</a></li>
+          <li class="mobile-drop__info-item"><a class="mobile-drop__info-link link-hover" href="#">Организациям</a></li>
+          <li class="mobile-drop__info-item"><a class="mobile-drop__info-link link-hover" href="#">Справка об отсутствии COVID
+              19</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+  <main>
+    <div class="section-wrapper">
+      <section class="about-company">
+        <h2 class="visually-hidden">Блок информации о скидках и лицензии</h2>
+        <div class="about-company__license">
+          <img class="about-company__image about-company__image--license" src="img/lic-crest.png" width="46" height="52" alt="Изображение герба департамента здраоохранения города Москва">
+          <p class="about-company__desc">Лицензия департамента здравоохранения города Москвы</p>
+        </div>
+        <p class="about-company__count"><span class="about-comany__bigger">25</span> Медицинских центров</p>
+        <picture>
+          <source media="(min-width: 1250px)" srcset="img/header-employee-desktop.jpg">
+          <source media="(min-width: 768px)" srcset="img/header-employee-desktop.jpg">
+          <img class="about-company__image about-company__image--employee" src="img/header-employee-mobile.jpg" width="320" height="248" alt="Информационное изображение сотрудника медицинского центра">
+        </picture>
+        <img class="about-company__image about-company__image--disc" src="img/discount.png" width="96" height="96" alt="Информационное изображение о скидках медицинского центра">
+        <p class="about-company__note">
+          Медицинские справки не продаются и не доставляются курьером, а выдаются только после личного прохождения
+          медицинского осмотра в соответствии с действующим законодательством РФ!
+        </p>
+      </section>
+      <div class="section-wrapper section-wrapper--grid">
+        <section class="med-reference">
+          <h2 class="med-reference__title">Оформить медсправку 003-В/у для ГИБДД, одно окно</h2>
+          <div class="med-reference__wrap">
+            <div class="med-reference__wrap med-reference__wrap--closest">
+              <p class="med-reference__label">Выберите ближайший филиал:</p>
+              <select class="med-reference__select" name="closest-branch" id="branch-select">
+                <option value="Bratislavskaya">Братиславская</option>
+              </select>
+            </div>
+            <div class="med-reference__wrap med-reference__wrap--time comission">
+              <span class="med-reference__text comission__text">
+                <img class="med-reference__icon comission__icon" src="img/ref-timer.jpg" width="30" height="30" alt="Изображение таймера">
+                Время прохождения комиссии</span>
+              <span class="med-reference__min comission__min"><b class="comission__int">30</b> мин.</span>
+            </div>
+          </div>
+        </section>
+        <section class="arrange">
+          <h2 class="visually-hidden">Виды справок</h2>
+          <div class="arrange__list">
+            <button class="arrange__button arrange__button--prev" type="button">
+              <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+            </button>
+            <button class="arrange__button arrange__button--next" type="button">
+              <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+            </button>
+            <div class="arrange__card card">
+              <div class="card__wrap">
+                <p class="card__special card__special--hide">Все вместе в одно окно</p>
+                <h3 class="card__title card__title--bigger">Справки для категории А, В 003в/у</h3>
+                <div class="card__icon-holder">
+                  <img class="card__icon" src="img/arrange-1.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                  <img class="card__icon" src="img/arrange-2.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                </div>
+                <div class="card__wrap card__wrap--price">
+                  <span class="card__text">Стоимость комиссии:</span>
+                  <span class="card__price">1 200 руб.</span>
+                </div>
+                <a class="card__details link-hover" href="#">Подробнее</a>
+              </div>
+              <a class="card__placeref-btn button" href="#">Оформить медсправку</a>
+            </div>
+            <div class="arrange__card card">
+              <div class="card__wrap">
+                <p class="card__special">Все вместе в одно окно</p>
+                <h3 class="card__title">Справки для категории А, В + нарколог и психиатр 003в/у</h3>
+                <div class="card__icon-holder">
+                  <img class="card__icon" src="img/arrange-3.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                  <img class="card__icon" src="img/arrange-4.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                </div>
+                <div class="card__wrap card__wrap--price">
+                  <span class="card__text">Стоимость комиссии:</span>
+                  <span class="card__price">2 500 руб.</span>
+                </div>
+                <a class="card__details link-hover" href="#">Подробнее</a>
+
+              </div>
+
+              <a class="card__placeref-btn button" href="#">Оформить медсправку</a>
+            </div>
+            <div class="arrange__card card">
+              <div class="card__wrap card__wrap--smaller">
+                <p class="card__special">Все вместе в одно окно</p>
+                <h3 class="card__title card__title--smaller">Справки для категории С, D, E с электроэнцефалограммой +
+                  нарколог и психиатр 003в/у</h3>
+                <div class="card__icon-holder">
+                  <img class="card__icon" src="img/arrange-5.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                  <img class="card__icon" src="img/arrange-6.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                  <img class="card__icon" src="img/arrange-7.jpg" width="60" height="60" alt="Иконка траспортного средства">
+                </div>
+                <div class="card__wrap card__wrap--price card__wrap--price-smaller">
+                  <span class="card__text">Стоимость комиссии:</span>
+                  <span class="card__price">2 800 руб.</span>
+                </div>
+                <a class="card__details link-hover" href="#">Подробнее</a>
+
+              </div>
+
+              <a class="card__placeref-btn button" href="#">Оформить медсправку</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <section class="ref-info">
+      <h2 class="ref-info__title">Медсправка водительская 003-В/у</h2>
+      <p class="ref-info__desc">Если Вам нужно оформить водительскую справку (форма 003-В/у) для ГИБДД, но нет
+        возможности получить заключение нарколога и психиатра в диспансере по месту жительства, то обращайтесь в наши
+        клиники.<span class="ref-info__dots">..</span> <a class="ref-info__more link-hover" href="#">далее</a> <span class="ref-info__hidden">
+          У нас Вы можете пройти полный медицинский осмотр, который включает обследования всех необходимых врачей, и
+          получить официальную водительскую справку в одном месте.
+        </span>
+      </p>
+      <a class="ref-info__less link-hover" href="#">свернуть</a>
+    </section>
+    <section class="advantages">
+      <h2 class="advantages__title">Преимущеста</h2>
+      <div class="advantages__wrap">
+        <ul class="advantages__carousel carousel-adv">
+          <li class="carousel-adv__item">
+
+            <a class="carousel-adv__link link-hover" href="#">
+
+            <img class="carousel-adv__icon" src="img/carousel-icon-1.png" width="100" height="100" alt="Изображение иконки">
+            <h3 class="carousel-adv__title">Быстрое получение документа</h3>
+            </a>
+          </li>
+          <li class="carousel-adv__item">
+
+            <a class="carousel-adv__link link-hover" href="#">
+
+            <img class="carousel-adv__icon" src="img/carousel-icon-2.png" width="100" height="100" alt="Изображение иконки">
+            <h3 class="carousel-adv__title">Доступная цена</h3>
+            </a>
+          </li>
+          <li class="carousel-adv__item">
+
+            <a class="carousel-adv__link link-hover" href="#">
+
+            <img class="carousel-adv__icon" src="img/carousel-icon-3.png" width="100" height="100" alt="Изображение иконки">
+            <h3 class="carousel-adv__title">Официальное оформление</h3>
+            </a>
+          </li>
+          <li class="carousel-adv__item">
+
+            <a class="carousel-adv__link link-hover" href="#">
+
+            <img class="carousel-adv__icon" src="img/carousel-icon-4.png" width="100" height="100" alt="Изображение иконки">
+            <h3 class="carousel-adv__title">Оформление в одном месте</h3>
+            </a>
+          </li>
+          <li class="carousel-adv__item">
+
+            <a class="carousel-adv__link link-hover" href="#">
+
+            <img class="carousel-adv__icon" src="img/carousel-icon-5.png" width="100" height="100" alt="Изображение иконки">
+            <h3 class="carousel-adv__title">25 медицинских центров</h3>
+            </a>
+          </li>
+        </ul>
+        <button class="advantages__button advantages__button--prev" type="button"><span class="visually-hidden">Кнопка
+            назад</span>
+          <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+        </button>
+        <button class="advantages__button advantages__button--next" type="button"><span class="visually-hidden">Кнопка
+            вперед</span>
+          <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+        </button>
+      </div>
+    </section>
+    <section class="reg">
+      <h2 class="reg__title">Оформить медсправку водительскую 003-В/у</h2>
+      <div class="reg__list">
+        <a class="reg__link reg__link--current link-hover" href="#">Категория A, B</a>
+        <a class="reg__link link-hover" href="#">Категория C, D, E</a>
+      </div>
+      <div class="reg__wrap-main">
+        <div class="reg__wrap">
+          <img class="reg__image" src="img/reg-client.jpg" width="320" height="239" alt="Изображение счастливого клиента">
+          <div class="reg__comission comission">
+            <span class="reg__text comission__text">
+              <img class="reg__icon comission__icon" src="img/ref-timer.jpg" width="30" height="30" alt="Изображение таймера">
+              Время прохождения комиссии</span>
+            <span class="reg__min comission__min"><b class="comission__int">30</b> мин.</span>
+          </div>
+        </div>
+        <div class="reg__card card">
+          <div class="reg__card-wrap card__wrap">
+            <h3 class="card__title card__title--bigger">Справки для категории А, В + нарколог и психиатр 003в/у</h3>
+            <div class="reg__card-icon-holder card__icon-holder">
+              <img class="card__icon" src="img/arrange-1.jpg" width="60" height="60" alt="Иконка траспортного средства">
+              <img class="card__icon" src="img/arrange-2.jpg" width="60" height="60" alt="Иконка траспортного средства">
+            </div>
+            <div class="card__wrap card__wrap--price">
+              <span class="card__text">Стоимость комиссии:</span>
+              <span class="reg__card-price card__price">2 500 руб.</span>
+              <span class="reg__card-exp">Выдается сроком на один год</span>
+            </div>
+          </div>
+        </div>
+        <div class="reg__papers papers">
+          <div class="papers__item papers__item--1">
+            <h3 class="papers__title">Необходимые документы:</h3>
+            <ul class="papers__list papers__list--note">
+              <li class="papers__list-item">Паспорт</li>
+              <li class="papers__list-item">Справка от нарколога и психиатра*</li>
+              <li class="papers__list-item papers__list-item--note">* В случае прохождения данных специалистов в наших
+                медцентрах справка не
+                требуются.</li>
+            </ul>
+          </div>
+          <div class="papers__item papers__item--2">
+            <h3 class="papers__title papers__title--bottom">Обследование у каких врачей нужно пройти:</h3>
+            <ul class="papers__list">
+              <li class="papers__list-item">терапевт или врач общей практики (семейный врач) — обязательно;</li>
+              <li class="papers__list-item">офтальмолог — обязательно;</li>
+              <li class="papers__list-item">психиатр — обязательно;</li>
+              <li class="papers__list-item">психиатр-нарколог — обязательно;</li>
+              <li class="papers__list-item">невролог — только если направит терапевт.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="reg__signup">
+          <a class="reg__signup-button button" href="#">Записаться на комиссию</a>
+          <div class="reg__signup-phone">
+            <picture>
+              <source media="(min-width: 1250px)" srcset="img/reg-staff-desktop.jpg">
+              <img class="reg__signup-image" src="img/reg-staff.jpg" width="92" height="90" alt="Изображение докторов">
+            </picture>
+            <div class="reg__signup-wrap">
+              <a class="reg__signup-phone-number" href="tel:+74956496451">+7 495 649-64-51</a>
+              <p class="reg__signup-text">Звоните! Онлайн запись на комиссию</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="services">
+      <h2 class="services__title">Услуги и стоимость</h2>
+      <div class="services__wrap">
+        <table class="services__table price-table">
+          <tr class="price-table__row">
+            <th class="price-table__head price-table__head--name">Наименование услуги</th>
+            <th class="price-table__head price-table__head--time">Время комиссии</th>
+            <th class="price-table__head price-table__head--price">Стоимость, руб.</th>
+            <th class="price-table__head price-table__head--isOnline">Онлайн запись</th>
+          </tr>
+          <tr class="price-table__row">
+            <td class="price-table__data price-table__data--name">Медсправка для водительских прав 003в/у (для категорий
+              A, A1, B, BE, B1, M)
+            </td>
+            <td class="price-table__data price-table__data--time"><span class="price-table__time-mobile">Время
+                комиссии</span> от 20 мин.</td>
+            <td class="price-table__data price-table__data--price"><span class="price-table__price-mobile">Стоимость</span> от 2 500 руб.</td>
+            <td class="price-table__data price-table__data--isOnline">
+              <a class="price-table__hover" href="#">Записаться на комиссию</a>
+              <img class="price-table__icon" src="img/table-icon.png" width="40" height="40" alt="Иконка галочки">
+            </td>
+          </tr>
+          <tr class="price-table__row">
+            <td class="price-table__data price-table__data--name">Справка для ГИБДД 003в/у (для категорий С, CE, C1,
+              C1E, D, DE, D1, D1E, Tm,
+              Тb)
+            </td>
+            <td class="price-table__data price-table__data--time"><span class="price-table__time-mobile">Время
+                комиссии</span> от 20 мин.</td>
+            <td class="price-table__data price-table__data--price"><span class="price-table__price-mobile">Стоимость</span> от 2 500 руб.</td>
+            <td class="price-table__data price-table__data--isOnline">
+              <a class="price-table__hover" href="#">Записаться на комиссию</a>
+              <img class="price-table__icon" src="img/table-icon.png" width="40" height="40" alt="Иконка галочки">
+            </td>
+          </tr>
+          <tr class="price-table__row">
+            <td class="price-table__data price-table__data--name">Водительская медкомиссия для ГИБДД (для категорий A,
+              A1, B, BE, B1, M) с
+              наркологом и психиатром</td>
+            <td class="price-table__data price-table__data--time"><span class="price-table__time-mobile">Время
+                комиссии</span> от 20 мин.</td>
+            <td class="price-table__data price-table__data--price"><span class="price-table__price-mobile">Стоимость</span> от 2 500 руб.</td>
+            <td class="price-table__data price-table__data--isOnline">
+              <a class="price-table__hover" href="#">Записаться на комиссию</a>
+              <img class="price-table__icon" src="img/table-icon.png" width="40" height="40" alt="Иконка галочки">
+            </td>
+          </tr>
+          <tr class="price-table__row price-table__row--mobile">
+            <td class="price-table__data price-table__data--name">Водительская медкомиссия с наркологом и психиатром
+              (для категорий С, CE, C1,
+              C1E, D, DE, D1, D1E, Tm, Тb)</td>
+            <td class="price-table__data price-table__data--time"><span class="price-table__time-mobile">Время
+                комиссии</span> от 20 мин.</td>
+            <td class="price-table__data price-table__data--price"><span class="price-table__price-mobile">Стоимость</span> от 2 500 руб.</td>
+            <td class="price-table__data price-table__data--isOnline">
+              <a class="price-table__hover" href="#">Записаться на комиссию</a>
+              <img class="price-table__icon" src="img/table-icon.png" width="40" height="40" alt="Иконка галочки">
+            </td>
+          </tr>
+          <tr class="price-table__row price-table__row--mobile">
+            <td class="price-table__data price-table__data--name">Медсправка водительская для ГИБДД с наркологом и
+              психиатром + ЭЭГ</td>
+            <td class="price-table__data price-table__data--time"><span class="price-table__time-mobile">Время
+                комиссии</span> от 20 мин.</td>
+            <td class="price-table__data price-table__data--price"><span class="price-table__price-mobile">Стоимость</span> от 2 500 руб.</td>
+            <td class="price-table__data price-table__data--isOnline">
+              <a class="price-table__hover" href="#">Записаться на комиссию</a>
+              <img class="price-table__icon" src="img/table-icon.png" width="40" height="40" alt="Иконка галочки">
+            </td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <section class="promo-banner">
+      <div class="promo-banner__wrap">
+        <h2 class="visually-hidden">Онлайн запись на коммиссию</h2>
+        <img class="promo-banner__image promo-banner__image--car" src="img/promo-banner-1.png" width="310" height="180" alt="Изображение автомобиля">
+        <div class="promo-banner__wrap-content">
+          <picture>
+            <source media="(min-width: 1024px)" srcset="img/promo-banner-2.png">
+            <img class="promo-banner__image promo-banner__image--abs" src="img/promo-banner-2-mobile.png" width="256" height="256" alt="Изображение сотрудника мед клиники">
+          </picture>
+          <p class="promo-banner__text">Запишитесь на медкомиссию онлайн!</p>
+          <div class="promo-banner__wrap-grid">
+            <div class="promo-banner__wrap-text">
+              <a class="promo-banner__phone" href="tel:+74956496451">+7 495 649-64-51</a>
+              <p class="promo-banner__call-text">Звоните! Онлайн запись на комиссию</p>
+            </div>
+            <a class="promo-banner__button button" href="#">Перезвоните мне</a>
+          </div>
+        </div>
+        <img class="promo-banner__image promo-banner__image--cert" src="img/promo-banner-3.jpg" width="169" height="239" alt="Изображение сертификата">
+      </div>
+    </section>
+    <section class="ref-for">
+      <h2 class="ref-for__title">Мед справка водительская 2020 для замены прав нужна для:</h2>
+      <button class="ref-for__button ref-for__button--prev" type="button">
+        <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+      </button>
+      <button class="ref-for__button ref-for__button--next" type="button">
+        <img src="img/slider-arrow.png" width="48" height="48" alt="Изображение стрелки">
+      </button>
+      <ul class="ref-for__list">
+        <li class="ref-for__item">
+          <img class="ref-for__image" src="img/ref-for-1.png" width="288" height="137" alt="Изображение водительсокго удостоверения и счастливого водителя">
+          <h3 class="ref-for__subtitle">Для замены водительского удостоверения</h3>
+          <p class="ref-for__desc">Водительская медкомиссия для ГИБДД</p>
+        </li>
+        <li class="ref-for__item">
+          <img class="ref-for__image" src="img/ref-for-2.png" width="288" height="137" alt="Изображение водительсокго удостоверения и счастливого водителя">
+          <h3 class="ref-for__subtitle">Для водительских прав</h3>
+          <p class="ref-for__desc">При восстановлении прав после лишения</p>
+        </li>
+        <li class="ref-for__item">
+          <img class="ref-for__image" src="img/ref-for-3.png" width="288" height="137" alt="Изображение водительсокго удостоверения и счастливого водителя">
+          <h3 class="ref-for__subtitle">Медкомиссия водителей</h3>
+          <p class="ref-for__desc">Для получения справки нового образца по форме 003-в/у</p>
+        </li>
+        <li class="ref-for__item">
+          <img class="ref-for__image" src="img/ref-for-4.png" width="288" height="137" alt="Изображение водительсокго удостоверения и счастливого водителя">
+          <h3 class="ref-for__subtitle">Медсправка для получения прав</h3>
+          <p class="ref-for__desc">В гаи с наркологом и психиатром</p>
+        </li>
+      </ul>
+    </section>
+    <section class="ref-info ref-info--desktop">
+      <h2 class="ref-info__title">Медсправка водительская 003-В/у</h2>
+      <p class="ref-info__desc">Если Вам нужно оформить водительскую справку (форма 003-В/у) для ГИБДД, но нет
+        возможности получить заключение нарколога и психиатра в диспансере по месту жительства, то обращайтесь в наши
+        клиники.<span class="ref-info__dots">..</span> <a class="ref-info__more" href="#">далее</a> <span class="ref-info__hidden">
+          У нас Вы можете пройти полный медицинский осмотр, который включает обследования всех необходимых врачей, и
+          получить официальную водительскую справку в одном месте.
+        </span>
+      </p>
+      <a class="ref-info__less" href="#">свернуть</a>
+    </section>
+    <section class="application">
+      <h2 class="application__title">Отправьте заявку - медсправка водительская через 30 минут!</h2>
+      <form class="application__form getapp-form" action="https://echo.htmlacademy.ru" method="post">
+        <div class="getapp-form__wrap-grid getapp-form__wrap-grid--form">
+          <div class="getapp-form__wrap">
+            <label class="getapp-form__label" for="name-field">Введите имя:</label>
+            <input class="getapp-form__input" type="text" id="name-field" placeholder="Имя">
+          </div>
+          <div class="getapp-form__wrap">
+            <label class="getapp-form__label" for="phone-field">Контактный телефон:</label>
+            <input class="getapp-form__input" type="text" id="phone-field" placeholder="+7 ___ ___-__-__">
+          </div>
+          <div class="getapp-form__wrap">
+            <label class="getapp-form__label" for="metro-field">Выберите метро:</label>
+            <select class="getapp-form__select" name="metro-select" id="metro-field">
+              <option class="getapp-form__option">Братиславская</option>
+            </select>
+          </div>
+          <div class="getapp-form__wrap getapp-form__wrap--textarea">
+            <label class="getapp-form__label" for="reference-field">Выберите нужную медсправку:</label>
+            <select class="getapp-form__select getapp-form__select--ref" name="reference-select" id="reference-field">
+              <option class="getapp-form__option" title="Справки в ГИБДД, для категории С, D, E с ЭЭГ + нарколог и психиатр 003в/у">Справки для категории
+                С...</option>
+            </select>
+          </div>
+        </div>
+        <div class="getapp-form__wrap-grid getapp-form__wrap-grid--submit">
+          <button class="getapp-form__submit button" type="submit">Получить медсправку</button>
+          <div class="getapp-form__wrap getapp-form__wrap--lic">
+            <input class="getapp-form__checkbox visually-hidden" type="checkbox" id="license-field" checked="">
+            <label class="getapp-form__label getapp-form__label--lic" for="license-field">Я принимаю условия передачи
+              информации</label>
+          </div>
+        </div>
+      </form>
+    </section>
+    <section class="map">
+      <h2 class="map__title">Филиалы на карте</h2>
+      <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114099.5178093139!2d37.62463450072663!3d55.73776730991538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54afc73d4b0c9%3A0x3d44d6cc5757cf4c!2z0JzQvtGB0LrQstCw!5e0!3m2!1sru!2sru!4v1602500292509!5m2!1sru!2sru" width="600" height="450"></iframe>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__wrap">
+      <div class="footer__wrap-grid">
+        <a class="footer__logo" href="#">
+          <img class="footer__image" src="img/footer-logo.png" width="159" height="63" alt="Логотип мед центра">
+        </a>
+        <ul class="footer__about-list">
+          <li class="footer__about-item"><a class="footer__about-link link-hover" href="#">О компании</a></li>
+          <li class="footer__about-item"><a class="footer__about-link link-hover" href="#">Филиалы на карте</a></li>
+          <li class="footer__about-item"><a class="footer__about-link link-hover" href="#">Услуги и цены</a></li>
+          <li class="footer__about-item"><a class="footer__about-link link-hover" href="#">Контакты</a></li>
+        </ul>
+        <div class="footer__work-time">
+          <a class="footer__work-phone link-hover" href="tel:+74956496451">
+            <img class="footer__work-icon" src="img/footer-call-icon.png" width="24" height="24" alt="Иконка трубки телефона">
+            +7 495 649-64-51</a>
+          <p class="footer__work-hours">
+            Время работы: Пн-Пт:
+            с 9:00 до 21:00 Сб-Вс: с 9:00 до 20:00
+          </p>
+        </div>
+        <p class="footer__copy">
+          © 2020 MEDСПРАВКИ
+        </p>
+      </div>
+      <ul class="footer__ref-list">
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Медицинские справки</a></li>
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Медицинские книжки</a></li>
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Диагностика</a></li>
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Частным лицам</a></li>
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Организациям</a></li>
+        <li class="footer__ref-item"><a class="footer__ref-link link-hover" href="#">Справка об отсутствии COVID 19</a></li>
+      </ul>
+      <ul class="footer__drivers-ref-list">
+        <li class="footer__drivers-ref-item"><a class="footer__drivers-ref-link" href="#">Справка для категорий А, В,
+            (003-в/у)</a></li>
+        <li class="footer__drivers-ref-item"><a class="footer__drivers-ref-link" href="#">Справка для категорий С, D
+            (003-в/у)</a></li>
+        <li class="footer__drivers-ref-item"><a class="footer__drivers-ref-link" href="#">Справка 003-в/у с наркологом и
+            психиатром</a></li>
+        <li class="footer__drivers-ref-item"><a class="footer__drivers-ref-link" href="#">Заключение нарколога и
+            психиатра</a></li>
+        <li class="footer__drivers-ref-item"><a class="footer__drivers-ref-link" href="#">Электроэнцефалограмма
+            головного мозга</a></li>
+      </ul>
+    </div>
+  </footer>
+  <script src="js/header-toggler.js"></script>
+  <script src="js/article-toggler.js"></script>
+</body>
+
+</html>
