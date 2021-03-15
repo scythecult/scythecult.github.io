@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6557e130-431b-4bc0-8472-f985c438ec76&lang=ru_RU">
+  </script>
+  <title>Catenergy</title>
+</head>
+
+<body>
+  <header class="header header--inner">
+    <div class="header__content">
+      <div class="header__head">
+        <a class="logo logo--inner" href="index.html">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img src="img/logo-mobile.svg" width="191" height="38" alt="Иконка логотипа магазина Catenergy">
+          </picture>
+        </a>
+        <button class="header__toggle header__toggle--open header__toggle--noevt" type="button" aria-expanded="false"
+          aria-controls="nav__list"><span class="visually-hidden">Закрыть/Открыть
+            меню</span>
+          <svg class="header__menu-icon" width="20" height="20" aria-hidden="true">
+            <use class="header__menu-menu" href="img/icons/sprite.svg#icon-menu-menu"></use>
+            <use class="header__menu-cross" href="img/icons/sprite.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="nav nav--inner nav--nojs" id="nav__list">
+        <a class="nav__link" href="index.html">Главная</a>
+        <a class="nav__link" href="catalog.html">Каталог продукции</a>
+        <a class="nav__link nav__link--current" href="form.html">Подбор программы</a>
+      </nav>
+    </div>
+  </header>
+  <main class="page-main">
+    <section class="programm">
+      <h1 class="programm__title page-title">Подбор программы</h1>
+      <h2 class="programm__slogan">Заполните анкету и мы подберем
+        программу питания для вашего кота</h2>
+      <form class="programm__form" action="https://echo.htmlacademy.ru" method="post" autocomplete="off">
+        <div class="programm__base-info">
+          <fieldset class="pet-info">
+            <div class="pet-info__holder input-states">
+              <label for="pet-name">Имя:*</label>
+              <input type="text" id="pet-name" placeholder="Барсик" minlength="1" maxlength="20" required>
+            </div>
+            <div class="pet-info__holder input-states">
+              <label for="pet-weight">Вес (кг):*</label>
+              <input type="number" id="pet-weight" placeholder="7" min="1" max="50" required>
+            </div>
+            <div class="pet-info__holder input-states">
+              <label for="pet-age">Возраст (лет):</label>
+              <input type="number" id="pet-age" placeholder="7" min="0" max="20" required>
+            </div>
+          </fieldset>
+          <fieldset class="pet-diet">
+            <div class="pet-diet__holder input-custom">
+              <input class="visually-hidden" id="slimming" type="radio" name="diet" value="slimming" checked>
+              <label for="slimming">Похудение</label>
+            </div>
+            <div class="pet-diet__holder input-custom">
+              <input class="visually-hidden " id="gaining" type="radio" name="diet" value="gaining">
+              <label for="gaining">Набор массы</label>
+            </div>
+            <div class="pet-diet__holder input-custom">
+              <input class="visually-hidden " id="dunno" type="radio" name="diet" value="dunno">
+              <label for="dunno">Не знаю (Нужен ваш совет)</label>
+            </div>
+          </fieldset>
+        </div>
+        <div class="programm__owner-info">
+          <fieldset class="owner-contacts section-decoration">
+            <h3 class="owner-contacts__title owner-title section-decoration__title">Контактные данные
+              (владельца кота)</h3>
+            <div class="owner-contacts__content">
+              <div class="owner-contacts__holder input-states">
+                <label for="owner-mail">E-mail:*</label>
+                <input type="email" id="owner-mail" placeholder="kuklachev@gmail.com" required>
+              </div>
+              <div class="owner-contacts__holder input-states">
+                <label for="owner-phone">Телефон:*</label>
+                <input type="tel" id="owner-phone" placeholder="8 (960) 900-60-90" required>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="owner-commentary section-decoration">
+            <h3 class="owner-commentary__title owner-title section-decoration__title">Комментарий</h3>
+            <textarea class="owner-commentary__text" name="owner-commentary" id="comment"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="owner-additional section-decoration">
+            <h3 class="owner-additional__title owner-title section-decoration__title">Дополнительно</h3>
+            <div class="owner-additional__content">
+              <div class="owner-additional__holder input-custom">
+                <input class="visually-hidden" type="checkbox" id="sweetener-check" name="additional" value="sweetener"
+                  checked>
+                <label for="sweetener-check">Сахарозаменитель</label>
+              </div>
+              <div class="owner-additional__holder input-custom">
+                <input class="visually-hidden" type="checkbox" id="still-water-check" name="additional"
+                  value="still-water">
+                <label for="still-water-check">Питьевая вода</label>
+              </div>
+              <div class="owner-additional__holder input-custom">
+                <input class="visually-hidden" type="checkbox" id="milk-check" name="additional" value="milk">
+                <label for="milk-check">Молоко</label>
+              </div>
+              <div class="owner-additional__holder input-custom">
+                <input class="visually-hidden" type="checkbox" id="vitamins-check" name="additional" value="vitamins">
+                <label for="vitamins-check">Витамины</label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+        <fieldset class="programm__submit">
+          <button class="programm__submit-button button" type="submit">Отправить заявку</button>
+          <p class="programm__requred">* — Обязательные поля</p>
+        </fieldset>
+      </form>
+    </section>
+    <section class="contacts contacts--inner">
+      <h2 class="visually-hidden">Наш адрес</h2>
+      <div class="contacts__positioner">
+        <div class="contacts__content">
+          <h3 class="contacts__proposal">приглашаем<br>
+            к сотрудничеству
+            дилеров!</h3>
+          <address class="contacts__address">
+            ул. Большая Конюшенная, д. 19/8
+            <span class="contacts__city">
+              Санкт-Петербург
+            </span>
+          </address>
+        </div>
+      </div>
+      <div class="contacts__map" style="width: 100%;
+      height: 400px;"></div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <a class="footer__logo logo-footer" href="#">
+        <img src="img/logo-footer.svg" width="128" height="24" alt="Логотип магазина Catenergy">
+      </a>
+      <div class="footer__social social">
+        <a class="social__link social__link--vk" href="#">
+          <span class="visually-hidden">Переход на сайт Vkontakte</span>
+          <svg class="social__icon" width="30" height="22">
+            <use href="img/icons/sprite.svg#icon-vk"></use>
+          </svg>
+        </a>
+        <a class="social__link social__link--insta" href="#">
+          <span class="visually-hidden">Переход на сайт Instagram</span>
+          <svg class="social__icon" width="23" height="23">
+            <use href="img/icons/sprite.svg#icon-insta"></use>
+          </svg>
+        </a>
+        <a class="social__link social__link--fb" href="#">
+          <span class="visually-hidden">Переход на сайт Facebook</span>
+          <svg class="social__icon" width="28" height="33">
+            <use href="img/icons/sprite.svg#icon-fb"></use>
+          </svg>
+        </a>
+      </div>
+      <div class="footer__copy">
+        <span class="footer__copy-name">HTML Academy</span>
+        <a class="footer__copy-link" href="#">
+          <svg class="footer__copy-icon" width="27" height="34">
+            <use href="img/icons/sprite.svg#icon-academy"></use>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+  <script src="js/common/ymap-controls.min.js"></script>
+  <script src="js/common/header-toggler.min.js"></script>
+</body>
+
+</html>
