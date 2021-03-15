@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/OpenSans-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
+  <link rel="stylesheet" href="css/style.min.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6557e130-431b-4bc0-8472-f985c438ec76&lang=ru_RU"></script>
+  <title>Pink</title>
+</head>
+
+<body>
+  <header class="header header--nojs">
+    <div class="header__content ">
+      <div class="header__head">
+        <a class="header__logo" href="index.html">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/header-logo-desktop.svg">
+            <source media="(min-width: 660px)" srcset="img/header-logo-tablet.svg">
+            <img src="img/header-logo-mobile.svg" width="75" height="22" alt="Логотип сервиса">
+          </picture>
+        </a>
+        <button class="toggle-nav" type="button" aria-expanded="false" aria-controls="navigation"><span
+            class="visually-hidden">Открыть/Закрыть меню</span>
+          <svg class="toggle-nav__icon" width="24" height="23">
+            <use class="toggle-nav__icon-menu" href="img/icons/sprite.svg#icon-menu-menu"></use>
+            <use class="toggle-nav__icon-cross" href="img/icons/sprite.svg#icon-menu-cross"></use>
+          </svg>
+        </button>
+      </div>
+      <nav class="header__navigation navigation" id="navigation">
+        <a href="index.html">Главная</a>
+        <a class="link-active" href="#">Фотографии</a>
+        <a href="form.html">Конкурс</a>
+        <a href="#">HTML Academy</a>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="promo">
+      <h1 class="visually-hidden">Приложение Pink</h1>
+      <div class="promo__content promo__content--inner">
+        <h2 class="promo__title">Фотографии пользователей</h2>
+      </div>
+    </section>
+    <section class="photo">
+      <h2 class="visually-hidden">Популярные фотографии</h2>
+      <header class="photo__header inner-head">
+        <p>Взгляните на фотографии, которые выкладывают пользователи! Видите, как
+          не хватает
+          ваших?</p>
+      </header>
+      <div class="photo__hero hero">
+        <a class="hero__link" href="#" data-hero="Панорама дня">
+          <picture>
+            <source media="(min-width: 960px)" srcset="img/hero-panorama-desktop.jpg">
+            <source media="(min-width: 660px)" srcset="img/hero-panorama-tablet.jpg">
+            <img class="hero__img" src="img/hero-panorama-mobile.jpg" width="320" height="137"
+              alt="Фотография пользователя">
+          </picture>
+        </a>
+        <div class="hero__content">
+          <div class="card">
+            <blockquote class="card__content">
+              <cite class="card__author">Анна <span class="card__time">(5 минут назад)</span></cite>
+              <p class="card__comment">
+                Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте
+                свои
+                вопросы!
+              </p>
+              <a class="card__like" href="#">нравится: <span class="card__like-count">215</span></a>
+            </blockquote>
+          </div>
+        </div>
+      </div>
+      <ul class="photo__content">
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-1-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-1-tablet.jpg">
+              <img class="card__img" src="img/photo-1-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Левон
+              <span class="card__time">(5 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Вчера он на луну летал, сегодня в руки к нам попал.
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">356</span></a>
+          </blockquote>
+        </li>
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-2-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-2-tablet.jpg">
+              <img class="card__img" src="img/photo-2-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Антон
+              <span class="card__time">(12 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Соседи будут рады!
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">666</span></a>
+          </blockquote>
+        </li>
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-3-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-3-tablet.jpg">
+              <img class="card__img" src="img/photo-3-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Борис
+              <span class="card__time">(20 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Здесь могла быть ваша цитата о высоком и вечном.
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">215</span></a>
+          </blockquote>
+        </li>
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-4-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-4-tablet.jpg">
+              <img class="card__img" src="img/photo-4-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Сергей
+              <span class="card__time">(25 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Самая кубанская в мире!
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">4</span></a>
+          </blockquote>
+        </li>
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-5-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-5-tablet.jpg">
+              <img class="card__img" src="img/photo-5-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Максим
+              <span class="card__time">(40 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Где снег-то?
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">150</span></a>
+          </blockquote>
+        </li>
+        <li class="photo__card card">
+          <a class="card__link" href="#">
+            <picture>
+              <source media="(min-width: 960px)" srcset="img/photo-6-desktop.jpg">
+              <source media="(min-width: 660px)" srcset="img/photo-6-tablet.jpg">
+              <img class="card__img" src="img/photo-6-mobile.jpg" width="280" height="180"
+                alt="Фотография пользователя">
+            </picture>
+          </a>
+          <blockquote class="card__content">
+            <cite class="card__author">Надежда
+              <span class="card__time">(45 часов назад)</span>
+            </cite>
+            <p class="card__comment">
+              Всем GM и взаимные лайки!
+            </p>
+            <a class="card__like" href="#">нравится: <span class="card__like-count">2560</span></a>
+          </blockquote>
+        </li>
+      </ul>
+    </section>
+    <section class="upload-app">
+      <h2 class="visually-hidden">Редактор фоторграфий</h2>
+      <p class="upload-app__title">Затмите их всех!<br>
+        Выкладывайте все, что накопилось в телефоне!</p>
+      <form class="upload-app__form" action="#" method="post" enctype="multipart/form-data">
+        <div class="upload-app__upload upload-photo">
+          <input class="upload-photo__input visually-hidden" type="file" id="file-input" name="filename"
+            accept=".jpg, .jpeg, .png">
+          <label class="upload-photo__mask" for="file-input"><span class="visually-hidden">Загрузка фотографии</span>
+            <img class="upload-photo__preview" src="img/app-preview-mobile.jpg" width="280" height="374"
+              alt="Фотограия пользователя">
+          </label>
+        </div>
+        <div class="upload-app__controls">
+          <ul class="upload-app__effects">
+            <li class="upload-app__effect effect">
+              <button class="effect__button effect__button--active" type="button" data-effect="scale"><span
+                  class="visually-hidden">Выделить
+                  область</span>
+                <svg class="effect__icon effect__icon--crop" width="48" height="48">
+                  <use href="img/icons/sprite.svg#icon-effect-crop"></use>
+                </svg></button>
+              <!-- custom slider -->
+              <div class="effect__slider">
+                <div class="effect__slider-bar">
+                  <div class="effect__slider-control" data-effect="scale"></div>
+                </div>
+              </div>
+            </li>
+            <li class="upload-app__effect effect">
+              <button class="effect__button" type="button" data-effect="grayscale"><span
+                  class="visually-hidden">Выделить
+                  область</span>
+                <svg class="effect__icon effect__icon--fill" width="48" height="43">
+                  <use href="img/icons/sprite.svg#icon-effect-fill"></use>
+                </svg></button>
+              <!-- custom slider -->
+              <div class="effect__slider">
+                <div class="effect__slider-bar">
+                  <div class="effect__slider-control" data-effect="grayscale"></div>
+                </div>
+              </div>
+            </li>
+            <li class="upload-app__effect effect">
+              <button class="effect__button" type="button" data-effect="contrast"><span class="visually-hidden">Выделить
+                  область</span>
+                <svg class="effect__icon effect__icon--contrast" width="32" height="32">
+                  <use href="img/icons/sprite.svg#icon-effect-contrast"></use>
+                </svg></button>
+              <!-- custom slider -->
+              <div class="effect__slider">
+                <div class="effect__slider-bar">
+                  <div class="effect__slider-control" data-effect="contrast"></div>
+                </div>
+              </div>
+            </li>
+            <li class="upload-app__effect upload-app__effect--m-only effect">
+              <button class="effect__button" type="button" data-effect="contrast"><span class="visually-hidden">Выделить
+                  область</span>
+                <svg class="effect__icon effect__icon--contrast" width="48" height="48">
+                  <use href="img/icon-effect-contrast.svg"></use>
+                </svg></button>
+              <!-- custom slider -->
+              <div class="effect__slider">
+                <div class="effect__slider-bar">
+                  <div class="effect__slider-control"></div>
+                </div>
+              </div>
+            </li>
+          </ul>
+          <div class="upload-app__submit">
+            <button class="upload-app__button button" type="submit">Запостить</button>
+            <button class="upload-app__button button upload-app__button--reset" type="reset">Отмена</button>
+          </div>
+        </div>
+      </form>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content">
+      <a class="logo-footer" href="#">
+        <picture>
+          <source media="(min-width: 960px)" srcset="img/footer-logo-desktop.svg">
+          <source media="(min-width: 660px)" srcset="img/footer-logo-tablet.svg">
+          <img class="logo-footer__img" src="img/footer-logo-tablet.svg" width="147" height="40"
+            alt="Логотип приложения Pink">
+        </picture>
+      </a>
+      <ul class="footer__social">
+        <li><a href="#" class="footer__link"><span class="visually-hidden">Перeход на на страницу Twitter</span>
+            <svg class="footer__icon" width="18" height="14">
+              <use class="footer__icon-tw" href="img/icons/sprite.svg#icon-footer-tw"></use>
+            </svg>
+          </a></li>
+        <li><a href="#" class="footer__link"><span class="visually-hidden">Переход на на страницу Facebook</span>
+            <svg class="footer__icon" width="9" height="18">
+              <use class="footer__icon-fb" href="img/icons/sprite.svg#icon-footer-fb"></use>
+            </svg>
+          </a></li>
+        <li><a href="#" class="footer__link"><span class="visually-hidden">Переход на на страницу Youtube</span>
+            <svg class="footer__icon" width="15" height="13">
+              <use class="footer__icon-yt" href="img/icons/sprite.svg#icon-footer-yt"></use>
+            </svg>
+          </a></li>
+      </ul>
+      <p class="footer__copy">
+        Разработано
+        <a class="footer__copy-link" href="#">
+          <span class="visually-hidden">Переход на на страницу HTML Academy</span>
+          <svg class="footer__copy-icon" width="27" height="34">
+            <use href="img/icons/sprite.svg#icon-academy"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/common/utils.min.js"></script>
+  <script src="js/common/header-toggle.min.js"></script>
+  <script src="js/photo/photo-upload.min.js"></script>
+  <script src="js/photo/slider-effect.min.js"></script>
+  <script src="js/photo/button-effect.min.js"></script>
+</body>
+</html>
