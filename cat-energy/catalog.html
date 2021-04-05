@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous" type="font/woff2" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6557e130-431b-4bc0-8472-f985c438ec76&lang=ru_RU"></script>
+  <title>Cat Energy</title>
+</head>
+<body class="page__body">
+  <header class="header">
+    <div class="header__content _content">
+      <nav class="header__navigation _navigation _navigation--nojs">
+        <div class="header__head _head">
+          <a class="header__logo _logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/icon-header-logo-d.svg">
+              <source media="(min-width: 768px)" srcset="img/icon-header-logo-t.svg">
+              <img class="_logo__img" src="img/icon-header-logo-m.svg" width="190" height="37"
+                alt="Логотип магазина Cat-Energy" />
+            </picture>
+
+          </a>
+          <button class="_burger" type="button" aria-label="Открыть/Закрыть меню" aria-controls="site-list">
+            <svg class="_burger__icon" width="23" height="23" aria-hidden="true" focusable="false">
+              <use class="_burger__icon-menu" href="img/icons/sprite.svg#icon-menu"></use>
+              <use class="_burger__icon-cross" href="img/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="header__site-list _site-list" id="site-list">
+          <li>
+            <a class="header__site-link _site-list__link" href="index.html">главная</a>
+          </li>
+          <li>
+            <a class="header__site-link header__site-link--current _site-list__link" href="#">каталог продукции</a>
+          </li>
+          <li>
+            <a class="header__site-link _site-list__link" href="form.html">подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main">
+    <section class='catalog'>
+      <div class='catalog__content _content'>
+        <h1 class="catalog__title page-title">
+          Каталог продукции
+        </h1>
+        <ul class="catalog__list">
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-1-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-1-d.png 1x'>
+                <img class='card__img' src='img/catalog-1-m.png' width="68" height="86" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                500 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">500 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">700 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-2-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-2-d.png 1x'>
+                <img class='card__img' src='img/catalog-2-m.png' width="84" height="100" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-1-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-1-d.png 1x'>
+                <img class='card__img' src='img/catalog-1-m.png' width="68" height="86" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-2-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-2-d.png 1x'>
+                <img class='card__img' src='img/catalog-2-m.png' width="84" height="100" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-1-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-1-d.png 1x'>
+                <img class='card__img' src='img/catalog-1-m.png' width="68" height="86" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-2-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-2-d.png 1x'>
+                <img class='card__img' src='img/catalog-2-m.png' width="84" height="100" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card">
+            <a class="card__link" href="#">
+              <picture>
+                <source media='(min-width: 1200px)' srcset='img/catalog-1-d.png 1x'>
+                <source media='(min-width: 768px)' srcset='img/catalog-1-d.png 1x'>
+                <img class='card__img' src='img/catalog-1-m.png' width="68" height="86" alt='Пример нашей работы'>
+              </picture>
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Cat Energy
+                PRO
+                1000 г</h3>
+              <table class="card__spec">
+                <tr>
+                  <td class="card__key">Масса</td>
+                  <td class="card__value">1000 г</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Вкус</td>
+                  <td class="card__value">Курица</td>
+                </tr>
+                <tr>
+                  <td class="card__key">Цена</td>
+                  <td class="card__value">1000 Р.</td>
+                </tr>
+              </table>
+            </div>
+            <a class="card__button page-button" href="#">заказать</a>
+          </li>
+          <li class="catalog__card card card--more">
+            <a class="card__link" href="#" aria-label="Кнопка показать все товары">
+            </a>
+            <div class="card__grid">
+              <h3 class="card__title">Показать еще 100500 товаров</h3>
+              <p class="card__text">На самом деле вкусов гораздо больше!</p>
+            </div>
+            <a class="card__button page-button" href="#">показать все</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class='additional'>
+      <div class='additional__content _content'>
+        <h2 class="additional__title page-subtitle">Дополнительные товары</h2>
+        <div class="additional__grid">
+          <ul class="additional__list">
+            <li class="additional__item good-item">
+              <table class="good-item__table">
+                <tbody class="good-item__body">
+                  <tr>
+                    <th class="good-item__title">
+                      Сахарозаменитель
+                    </th>
+                    <th class="good-item__empty">
+                    </th>
+                  </tr>
+                  <tr class="good-item__spec">
+                    <td class="good-item__key">1 упаковка (100 г)</td>
+                    <td class="good-item__value">200 Р.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="good-item__button page-button" href="#">заказать</a>
+            </li>
+            <li class="additional__item good-item">
+              <table class="good-item__table">
+                <tbody class="good-item__body">
+                  <tr>
+                    <th class="good-item__title">
+                      питьевая вода
+                    </th>
+                    <th class="good-item__empty">
+                    </th>
+                  </tr>
+                  <tr class="good-item__spec">
+                    <td class="good-item__key">5 литров</td>
+                    <td class="good-item__value">50 Р.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="good-item__button page-button" href="#">заказать</a>
+            </li>
+            <li class="additional__item good-item">
+              <table class="good-item__table">
+                <tbody class="good-item__body">
+                  <tr>
+                    <th class="good-item__title">
+                      молоко
+                    </th>
+                    <th class="good-item__empty">
+                    </th>
+                  </tr>
+                  <tr class="good-item__spec">
+                    <td class="good-item__key">1 литр</td>
+                    <td class="good-item__value">100 Р.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="good-item__button page-button" href="#">заказать</a>
+            </li>
+            <li class="additional__item good-item">
+              <table class="good-item__table">
+                <tbody class="good-item__body">
+                  <tr>
+                    <th class="good-item__title">
+                      витамины
+                    </th>
+                    <th class="good-item__empty">
+                    </th>
+                  </tr>
+                  <tr class="good-item__spec">
+                    <td class="good-item__key">1 упаковка (30 г)</td>
+                    <td class="good-item__value">300 Р.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <a class="good-item__button page-button" href="#">заказать</a>
+            </li>
+          </ul>
+          <div class="additional__gift gift">
+            <p class="gift__text">
+              Закажите все
+              и получите чехол для
+              кота в подарок!
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer footer--inner">
+    <div class="footer__content _content">
+      <section class="footer__contacts contacts">
+        <h2 class="contacts__title">приглашаем
+          к сотрудничеству дилеров!</h2>
+        <address class="contacts__address _address">
+          <p class="contacts__text">ул. Большая
+            Конюшенная, д. 19/8 <span class="contacts__text-separator">
+              Санкт-Петербург
+            </span>
+          </p>
+        </address>
+      </section>
+    </div>
+    <!-- MAP -->
+    <div class="_map"></div>
+    <!-- END MAP -->
+    <div class="footer__content footer__content--bg _content">
+      <a class="footer__logo _logo" href="#">
+        <img class="_logo__img" src="img/icon-footer-logo.svg" width="128" height="24"
+          alt="Логотип магазина Cat-Energy" />
+      </a>
+      <ul class="footer__socials _socials">
+        <li>
+          <a class="_socials__link _socials__link--insta" href="#" aria-label="Ссылка на Instagram">
+            <svg class="_socials__icon" width="22" height="21" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-fb" href="img/icons/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="_socials__link _socials__link--fb" href="#" aria-label="Ссылка на Facebook">
+            <svg class="_socials__icon" width="15" height="28" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-vk" href="img/icons/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="_socials__link _socials__link--tw" href="#" aria-label="Ссылка на Twitter">
+            <svg class="_socials__icon" width="22" height="28" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-insta" href="img/icons/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copy _copyright">HTML Academy
+        <a class="_copyright__icon" href="#">
+          <svg class='_copyright__icon-copy' width='27' height='34' aria-hidden='true' focusable='false'>
+            <use href='img/icons/sprite.svg#icon-footer-html'></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/common/y-map.min.js"></script>
+  <script src="js/common/_menu-toggler.min.js"></script>
+</body>
+
+</html>

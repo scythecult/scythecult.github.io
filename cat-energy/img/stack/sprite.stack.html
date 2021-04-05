@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="utf-8"/>
+		<meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+		<title>SVG stack preview | svg-sprite</title>
+		<style>@charset "UTF-8";body{padding:0;margin:0;color:#666;background:#fafafa;font-family:Arial,Helvetica,sans-serif;font-size:1em;line-height:1.4}header{display:block;padding:3em 3em 2em 3em;background-color:#fff}header p{margin:2em 0 0 0}section{border-top:1px solid #eee;padding:2em 3em 0 3em}section ul{margin:0;padding:0}section li{display:inline;display:inline-block;background-color:#fff;position:relative;margin:0 2em 2em 0;vertical-align:top;border:1px solid #ccc;padding:1em 1em 3em 1em;cursor:default}.icon-box{margin:0;width:144px;height:144px;position:relative;background:#ccc url("data:image/gif;base64,R0lGODlhDAAMAIAAAMzMzP///yH/C1hNUCBEYXRhWE1QPD94cGFja2V0IGJlZ2luPSLvu78iIGlkPSJXNU0wTXBDZWhpSHpyZVN6TlRjemtjOWQiPz4gPHg6eG1wbWV0YSB4bWxuczp4PSJhZG9iZTpuczptZXRhLyIgeDp4bXB0az0iQWRvYmUgWE1QIENvcmUgNS4wLWMwNjEgNjQuMTQwOTQ5LCAyMDEwLzEyLzA3LTEwOjU3OjAxICAgICAgICAiPiA8cmRmOlJERiB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiPiA8cmRmOkRlc2NyaXB0aW9uIHJkZjphYm91dD0iIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1LjEgV2luZG93cyIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozQjk4OTI0MUY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozQjk4OTI0MkY5NTIxMUUyQkJDMEI5NEFEM0Y1QTYwQyI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjNCOTg5MjNGRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjNCOTg5MjQwRjk1MjExRTJCQkMwQjk0QUQzRjVBNjBDIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+Af/+/fz7+vn49/b19PPy8fDv7u3s6+rp6Ofm5eTj4uHg397d3Nva2djX1tXU09LR0M/OzczLysnIx8bFxMPCwcC/vr28u7q5uLe2tbSzsrGwr66trKuqqainpqWko6KhoJ+enZybmpmYl5aVlJOSkZCPjo2Mi4qJiIeGhYSDgoGAf359fHt6eXh3dnV0c3JxcG9ubWxramloZ2ZlZGNiYWBfXl1cW1pZWFdWVVRTUlFQT05NTEtKSUhHRkVEQ0JBQD8+PTw7Ojk4NzY1NDMyMTAvLi0sKyopKCcmJSQjIiEgHx4dHBsaGRgXFhUUExIREA8ODQwLCgkIBwYFBAMCAQAAIfkEAAAAAAAsAAAAAAwADAAAAhaEH6mHmmzcgzJAUG/NVGrfOZ8YLlABADs=") top left repeat;border:1px solid #ccc;display:table-cell;vertical-align:middle;text-align:center}.icon{display:inline;display:inline-block}h1{margin-top:0}h2{margin:0;padding:0;font-size:1em;font-weight:normal;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;position:absolute;left:1em;right:1em;bottom:1em}footer{display:block;margin:0;padding:0 3em 3em 3em}footer p{margin:0;font-size:.7em}footer a{color:#0f7595;margin-left:0}</style>
+		
+<!--
+	
+Sprite shape dimensions
+====================================================================================================
+You will need to set the sprite shape dimensions via CSS when you use them as stack SVGs, otherwise
+they would become a huge 100% in size. You may use the following dimension classes for doing so.
+They might well be outsourced to an external stylesheet of course.
+
+-->
+
+<style type="text/css">
+	.svg-icon-burger-dims { width: 50px; height: 24px; }
+	.svg-icon-cross-dims { width: 23px; height: 23px; }
+	.svg-icon-email-dims { width: 20px; height: 14px; }
+	.svg-icon-fb-dims { width: 15px; height: 28px; }
+	.svg-icon-footer-html-dims { width: 27px; height: 34px; }
+	.svg-icon-footer-logo-dims { width: 128px; height: 24px; }
+	.svg-icon-gift-dims { width: 78px; height: 80px; }
+	.svg-icon-header-logo-d-dims { width: 202px; height: 59px; }
+	.svg-icon-header-logo-m-dims { width: 191px; height: 38px; }
+	.svg-icon-header-logo-t-dims { width: 174px; height: 52px; }
+	.svg-icon-html-dims { width: 27px; height: 34px; }
+	.svg-icon-insta-dims { width: 22px; height: 22px; }
+	.svg-icon-phone-dims { width: 20px; height: 20px; }
+	.svg-icon-twitter-dims { width: 23px; height: 20px; }
+</style>
+
+<!--
+====================================================================================================
+-->
+
+	</head>
+	<body>
+		<header>
+			<h1>SVG stack preview</h1>
+			<p>This preview features an SVG stack. Please have a look at the HTML source for further details and be aware of the following constraints:</p>
+			<ul>
+				<li>Your browser has to <a href="http://caniuse.com/#feat=svg-fragment" target="_blank">support SVG fragment identifiers</a> for SVG stacks to work.</li>
+				<li>Support for SVG fragment identifiers hasn't always been that decent. For older browsers you will have to use some prolyfill like <a href="https://github.com/preciousforever/SVG-Stacker/blob/master/fixsvgstack.jquery.js" target="_blank">fixsvgstack.jquery.js</a>.</li>
+			</ul>
+		</header>
+		<section>
+			
+<!--
+	
+SVG stack
+====================================================================================================
+These SVG images make use of fragment identifiers (IDs) to reference certain portions of the
+external sprite. By default, all shapes inside the sprite are hidden by CSS. The `:target` pseudo
+selector is used to show the very shape that is referenced by the fragment identifier.  
+
+-->
+
+			<ul>
+				
+				<li title="icon-burger">
+					<div class="icon-box">
+						
+						<!-- icon-burger -->
+						<img src="../icons/sprite.svg#icon-burger" class="svg-icon-burger-dims" alt="icon-burger"/>
+						
+					</div>
+					<h2>icon-burger</h2>
+				</li>
+				<li title="icon-cross">
+					<div class="icon-box">
+						
+						<!-- icon-cross -->
+						<img src="../icons/sprite.svg#icon-cross" class="svg-icon-cross-dims" alt="icon-cross"/>
+						
+					</div>
+					<h2>icon-cross</h2>
+				</li>
+				<li title="icon-email">
+					<div class="icon-box">
+						
+						<!-- icon-email -->
+						<img src="../icons/sprite.svg#icon-email" class="svg-icon-email-dims" alt="icon-email"/>
+						
+					</div>
+					<h2>icon-email</h2>
+				</li>
+				<li title="icon-fb">
+					<div class="icon-box">
+						
+						<!-- icon-fb -->
+						<img src="../icons/sprite.svg#icon-fb" class="svg-icon-fb-dims" alt="icon-fb"/>
+						
+					</div>
+					<h2>icon-fb</h2>
+				</li>
+				<li title="icon-footer-html">
+					<div class="icon-box">
+						
+						<!-- icon-footer-html -->
+						<img src="../icons/sprite.svg#icon-footer-html" class="svg-icon-footer-html-dims" alt="icon-footer-html"/>
+						
+					</div>
+					<h2>icon-footer-html</h2>
+				</li>
+				<li title="icon-footer-logo">
+					<div class="icon-box">
+						
+						<!-- icon-footer-logo -->
+						<img src="../icons/sprite.svg#icon-footer-logo" class="svg-icon-footer-logo-dims" alt="icon-footer-logo"/>
+						
+					</div>
+					<h2>icon-footer-logo</h2>
+				</li>
+				<li title="icon-gift">
+					<div class="icon-box">
+						
+						<!-- icon-gift -->
+						<img src="../icons/sprite.svg#icon-gift" class="svg-icon-gift-dims" alt="icon-gift"/>
+						
+					</div>
+					<h2>icon-gift</h2>
+				</li>
+				<li title="icon-header-logo-d">
+					<div class="icon-box">
+						
+						<!-- icon-header-logo-d -->
+						<img src="../icons/sprite.svg#icon-header-logo-d" class="svg-icon-header-logo-d-dims" alt="icon-header-logo-d"/>
+						
+					</div>
+					<h2>icon-header-logo-d</h2>
+				</li>
+				<li title="icon-header-logo-m">
+					<div class="icon-box">
+						
+						<!-- icon-header-logo-m -->
+						<img src="../icons/sprite.svg#icon-header-logo-m" class="svg-icon-header-logo-m-dims" alt="icon-header-logo-m"/>
+						
+					</div>
+					<h2>icon-header-logo-m</h2>
+				</li>
+				<li title="icon-header-logo-t">
+					<div class="icon-box">
+						
+						<!-- icon-header-logo-t -->
+						<img src="../icons/sprite.svg#icon-header-logo-t" class="svg-icon-header-logo-t-dims" alt="icon-header-logo-t"/>
+						
+					</div>
+					<h2>icon-header-logo-t</h2>
+				</li>
+				<li title="icon-html">
+					<div class="icon-box">
+						
+						<!-- icon-html -->
+						<img src="../icons/sprite.svg#icon-html" class="svg-icon-html-dims" alt="icon-html"/>
+						
+					</div>
+					<h2>icon-html</h2>
+				</li>
+				<li title="icon-insta">
+					<div class="icon-box">
+						
+						<!-- icon-insta -->
+						<img src="../icons/sprite.svg#icon-insta" class="svg-icon-insta-dims" alt="icon-insta"/>
+						
+					</div>
+					<h2>icon-insta</h2>
+				</li>
+				<li title="icon-phone">
+					<div class="icon-box">
+						
+						<!-- icon-phone -->
+						<img src="../icons/sprite.svg#icon-phone" class="svg-icon-phone-dims" alt="icon-phone"/>
+						
+					</div>
+					<h2>icon-phone</h2>
+				</li>
+				<li title="icon-twitter">
+					<div class="icon-box">
+						
+						<!-- icon-twitter -->
+						<img src="../icons/sprite.svg#icon-twitter" class="svg-icon-twitter-dims" alt="icon-twitter"/>
+						
+					</div>
+					<h2>icon-twitter</h2>
+				</li>
+			</ul>
+
+<!--
+====================================================================================================
+-->
+
+		</section>
+		<footer>
+			<p>Generated at Tue, 23 Mar 2021 13:25:29 GMT by <a href="https://github.com/jkphl/svg-sprite" target="_blank">svg-sprite</a>.</p>
+		</footer>
+	</body>
+</html>

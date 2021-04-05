@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font" crossorigin="anonymous" type="font/woff2" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=6557e130-431b-4bc0-8472-f985c438ec76&lang=ru_RU"></script>
+  <title>Cat Energy</title>
+</head>
+<body class="page__body">
+  <header class="header">
+    <div class="header__content _content">
+      <nav class="header__navigation _navigation _navigation--nojs">
+        <div class="header__head _head">
+          <a class="header__logo _logo" href="index.html">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/icon-header-logo-d.svg">
+              <source media="(min-width: 768px)" srcset="img/icon-header-logo-t.svg">
+              <img class="_logo__img" src="img/icon-header-logo-m.svg" width="190" height="37"
+                alt="Логотип магазина Cat-Energy" />
+            </picture>
+
+          </a>
+          <button class="_burger" type="button" aria-label="Открыть/Закрыть меню" aria-controls="site-list">
+            <svg class="_burger__icon" width="23" height="23" aria-hidden="true" focusable="false">
+              <use class="_burger__icon-menu" href="img/icons/sprite.svg#icon-menu"></use>
+              <use class="_burger__icon-cross" href="img/icons/sprite.svg#icon-cross"></use>
+            </svg>
+          </button>
+        </div>
+        <ul class="header__site-list _site-list" id="site-list">
+          <li>
+            <a class="header__site-link _site-list__link" href="index.html">главная</a>
+          </li>
+          <li>
+            <a class="header__site-link _site-list__link" href="catalog.html">каталог продукции</a>
+          </li>
+          <li>
+            <a class="header__site-link header__site-link--current _site-list__link" href="#">подбор программы</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main class="page__main">
+    <section class="form">
+      <div class="form__content _content">
+        <h1 class="form__title page-title">
+          Подбор программы
+        </h1>
+        <p class="form__slogan annotation-text annotation-text--inner">Заполните анкету, и мы подберем
+          программу питания для вашего кота</p>
+        <!-- form starts -->
+        <form class="form__list cat-form" action="#" method="post" autocomplete="off">
+
+          <fieldset class="cat-form__fullname common-field">
+            <ul class="common-field__content">
+              <li class="common-field__item">
+                <label class="common-field__label" for="name-field">Имя:*</label>
+                <input class="common-field__input" type="text" id="name-field" placeholder="Барсик" required>
+              </li>
+              <li class="common-field__item">
+                <label class="common-field__label" for="weight-field">Вес (кг):*</label>
+                <input class="common-field__input" type="text" id="weight-field" placeholder="7" required>
+              </li>
+              <li class="common-field__item">
+                <label class="common-field__label" for="age-field">Возраст (лет):</label>
+                <input class="common-field__input" type="text" id="age-field" placeholder="7">
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="cat-form__course custom-elem">
+            <ul class="custom-elem__content">
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="radio" name="diet" value="slimming"
+                  id="slimming-field" checked>
+                <label class="custom-elem__label custom-elem__label--radio" for="slimming-field">похудение</label>
+              </li>
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="radio" name="diet" value="gaining"
+                  id="gaining-field">
+                <label class="custom-elem__label custom-elem__label--radio" for="gaining-field">Набор массы</label>
+              </li>
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="radio" name="diet" value="advice"
+                  id="advice-field">
+                <label class="custom-elem__label custom-elem__label--radio" for="advice-field">Не знаю (Нужен ваш
+                  совет)</label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="cat-form__onwer common-field">
+            <h2 class="cat-form__subtitle page-subtitle page-subtitle--inner">Контактные данные<br>
+              (владельца кота)</h2>
+            <ul class="common-field__content">
+              <li class="common-field__item common-field__item--spec">
+                <label class="common-field__label common-field__label--spec" for="mail-field">E-mail:*
+                  <input class="common-field__input common-field__input--spec" type="email" id="mail-field"
+                    placeholder="kuklachev@gmail.com" required>
+                  <svg class="common-field__icon common-field__icon--mail" width="20" height="14" aria-hidden="true"
+                    focusable="false">
+                    <use href="img/icons/sprite.svg#icon-email"></use>
+                  </svg>
+                </label>
+              </li>
+              <li class="common-field__item common-field__item--spec">
+                <label class="common-field__label common-field__label--spec" for="tel-field">Телефон:*
+                  <input class="common-field__input common-field__input--spec " type="tel" id="tel-field"
+                    placeholder="8 (960) 900-60-90" required>
+                  <svg class="common-field__icon common-field__icon--tel" width="20" height="20" aria-hidden="true"
+                    focusable="false">
+                    <use href="img/icons/sprite.svg#icon-phone"></use>
+                  </svg>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="cat-form__commentary common-field">
+            <h2 class="cat-form__subtitle page-subtitle page-subtitle--inner">Комментарий</h2>
+            <textarea class="common-field__textarea" name="feedback"
+              placeholder="Расскажите обо всех повадках кота"></textarea>
+          </fieldset>
+          <fieldset class="cat-form__additional custom-elem">
+            <h2 class="cat-form__subtitle cat-form__subtitle--additional page-subtitle page-subtitle--inner">
+              Дополнительно</h2>
+            <ul class="custom-elem__content">
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="checkbox" name="additional" value="sugar"
+                  id="sugar-field" checked>
+                <label class="custom-elem__label custom-elem__label--checkbox"
+                  for="sugar-field">сахарозаменитель</label>
+              </li>
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="checkbox" name="additional" value="water"
+                  id="water-field">
+                <label class="custom-elem__label custom-elem__label--checkbox" for="water-field">питьевая вода</label>
+              </li>
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="checkbox" name="additional" value="milk"
+                  id="milk-field">
+                <label class="custom-elem__label custom-elem__label--checkbox" for="milk-field">молоко</label>
+              </li>
+              <li class="custom-elem__item">
+                <input class="custom-elem__input visually-hidden" type="checkbox" name="additional" value="vitamine"
+                  id="vitamine-field">
+                <label class="custom-elem__label custom-elem__label--checkbox" for="vitamine-field">витамины</label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="cat-form__submit-field">
+            <div class="cat-form__submit-content">
+              <button class="cat-form__submit-button page-button" type="submit">отправить заявку</button>
+              <p class="cat-form__submit-required">* — Обязательные поля</p>
+            </div>
+          </fieldset>
+        </form>
+        <!-- form ends -->
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="footer__content footer--inner _content">
+      <section class="footer__contacts contacts">
+        <h2 class="contacts__title">приглашаем
+          к сотрудничеству дилеров!</h2>
+        <address class="contacts__address _address">
+          <p class="contacts__text">ул. Большая
+            Конюшенная, д. 19/8 <span class="contacts__text-separator">
+              Санкт-Петербург
+            </span>
+          </p>
+        </address>
+      </section>
+    </div>
+    <!-- MAP -->
+    <div class="_map"></div>
+    <!-- END MAP -->
+    <div class="footer__content footer__content--bg _content">
+      <a class="footer__logo _logo" href="#">
+        <img class="_logo__img" src="img/icon-footer-logo.svg" width="128" height="24"
+          alt="Логотип магазина Cat-Energy" />
+      </a>
+      <ul class="footer__socials _socials">
+        <li>
+          <a class="_socials__link _socials__link--insta" href="#" aria-label="Ссылка на Instagram">
+            <svg class="_socials__icon" width="22" height="21" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-fb" href="img/icons/sprite.svg#icon-insta"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="_socials__link _socials__link--fb" href="#" aria-label="Ссылка на Facebook">
+            <svg class="_socials__icon" width="15" height="28" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-vk" href="img/icons/sprite.svg#icon-fb"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a class="_socials__link _socials__link--tw" href="#" aria-label="Ссылка на Twitter">
+            <svg class="_socials__icon" width="22" height="28" aria-hidden="true" focusable="false">
+              <use class="_socials__icon-insta" href="img/icons/sprite.svg#icon-twitter"></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+      <p class="footer__copy _copyright">HTML Academy
+        <a class="_copyright__icon" href="#">
+          <svg class="_copyright__icon-copy" width="27" height="34" aria-hidden="true" focusable="false">
+            <use href="img/icons/sprite.svg#icon-footer-html"></use>
+          </svg>
+        </a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/common/y-map.min.js"></script>
+  <script src="js/common/_menu-toggler.min.js"></script>
+</body>
+
+</html>
