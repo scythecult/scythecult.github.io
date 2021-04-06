@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.min.css">
+  <link rel="icon" href="img/fist.svg" sizes="any" type="image/svg+xml">
+  <title>Alexander Shabashov</title>
+</head>
+<body class="page__body">
+  <header class="header">
+    <h1 class="visually-hidden">Сайт-портфолио Александра Шабашова</h1>
+    <a class="site-title">
+      <img src="img/etosasha.jpg" width="45" height="45" alt="Фото Александра Шабашова">
+      <span>Alexander <strong>Shabashov</strong></span>
+    </a>
+    <nav class="site-nav">
+      <ul class="site-list">
+        <li><a class="site-list__link site-list__link--about" href="#" data-about="person">About me</a></li>
+        <li><a class="site-list__link site-list__link--blog" href="#" data-blog="test">Blog</a></li>
+        <li><a class="site-list__link" href="https://t.me/sasharazdva" target="_blank">Telegram</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="page__main" aria-label="Основное содержание сайта">
+  </main>
+  <template id="modal">
+    <section class="modal" data-overlay>
+      <h2 class="visually-hidden">Информация об авторе</h2>
+      <div class="modal__content modal__content--show" tabindex="0">
+      </div>
+      <button class="modal__close" data-closemodal type="button"><span class="visually-hidden">Закрыть
+          окно</span>
+      </button>
+    </section>
+  </template>
+  <template id="project">
+    <article class="project">
+      <a class="project__link" href="#" data-toggleaside="Pink" title="Pink">
+        <h3 class="project__title visually-hidden">Pink</h3>
+        <svg class="project__icon" width="201" height="60" aria-hidden="true" focusable="false">
+          <use href="img/icons/sprite.svg#icon-pink"></use>
+        </svg>
+        <img src="img/pink.jpg" width="320" height="320" alt="Pink">
+      </a>
+    </article>
+  </template>
+  <template id="info">
+    <article class="info">
+      <div class="info__job">
+        <h2 class="info__title">Cat Energy</h2>
+        <div class="info__implement">
+          <p class="info__implement-text">Для реализации проекта использовалось:</p>
+          <ul class="info__tech-list">
+          </ul>
+        </div>
+      </div>
+      <div class="info__content">
+        <p class="info__desc">Интернет-магазин фитнес еды для котиков</p>
+        <dl class="info__meta">
+          <div class="info__meta-wrap">
+            <dt>Время выполения:</dt>
+            <dd class="info__meta-time">20 часов</dd>
+          </div>
+          <div class="info__meta-wrap">
+            <dt>Адаптивность:</dt>
+            <dd class="info__meta-adaptive">Да</dd>
+          </div>
+          <div class="info__meta-wrap">
+            <dt>Сложность <sup class="info__dt-note">(Критерии <a class="info__link" href="https://htmlacademy.ru/study"
+                  target="_blank">HTML
+                  Academy</a>)</sup> :</dt>
+            <dd class="info__diff" data-diff="Легкая">Средняя</dd>
+          </div>
+          <div class="info__meta-wrap">
+            <dt>Посмотреть работу: </dt>
+            <dd><a class="info__link info__link--work" href="$url" target="_blank">Cat Energy</a></dd>
+          </div>
+          <div class="info__meta-wrap">
+            <dt>Посмотреть репозиторий:</dt>
+            <dd><a class="info__link info__link--git" href="$url" target="_blank">Cat Energy</a></dd>
+          </div>
+        </dl>
+        <dl class="accordeon">
+        </dl>
+      </div>
+    </article>
+  </template>
+  <template id="accordeon__item">
+    <div class="accordeon__item">
+      <dt class="accordeon__term">
+        <button class="accordeon__button" type="button">Посмотреть ТЗ</button>
+      </dt>
+      <dd class="accordeon__def ">
+        <div class="accordeon__def-content">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias dolores repellat inventore qui
+          minus
+          suscipit totam ipsum sit assumenda nesciunt, libero aut delectus? Labore eum obcaecati cupiditate
+          distinctio magni perspiciatis?
+        </div>
+      </dd>
+    </div>
+  </template>
+  <template id="about-me">
+    <article class="info about-me">
+      <h2 class="info__title about-me__title">Обо мне</h2>
+      <div class="info__content about-me__content">
+        <img class="about-me__picture" src="img/etosasha-big.jpg" width="500" alt="Фото Александра Шабашова">
+        <div class="about-me__info">
+          <p>Привет! Меня зовут Александр, я начинающий верстальщик/frontend-разработчик (потому что на <a
+              class="info__link" href="https://spb.hh.ru/">hh.ru</a> так часто пишут),
+            который
+            недавно переехал в Санкт-Петербург. За моими плечами два с половиной года изучения и углубления в веб
+            технологии, это как мой личный опыт, так и опыт полученный в процессе прохождения курсов от HTML Academy.
+            Данный сайт-портфолио является одним из самых наглядных способов проверки (наравне с собеседованием, если
+            позовёте 😁) моих способностей как кандидата.<br>
+            Из своих достижений могу выделить:</p>
+          <ul class="about-me__features">
+            <li>Успешное завершение трёх курсов от HTML Academy. <sup class="about-me__tip"><a class="info__link"
+                  href="https://htmlacademy.ru/study" target="_blank">вот
+                  эти ребята</a></sup>
+            </li>
+            <li>Прочитал и осознал книгу "Javascript для детей" Моргана Ника. <sup class="about-me__tip"><a
+                  class="info__link"
+                  href="https://www.ozon.ru/product/javascript-dlya-detey-samouchitel-po-programmirovaniyu-138148848/"
+                  target="_blank">вот
+                  эти ребята</a></sup>
+            </li>
+            <li>Прочитал и осознал почти весь учебник Кантора. <sup class="about-me__tip"><a class="info__link"
+                  href="https://learn.javascript.ru/" target="_blank">вот
+                  эти ребята</a></sup>
+            </li>
+            <li>Прочитал и осознал «Область Видимости и Замыкания», «This и Прототипы Объектов», из серии You Don't Know
+              JS автора Кайла Симмонса (про замыкания не понравилось, круче вот <a class="info__link"
+                href="http://dmitrysoshnikov.com/ecmascript/javascript-the-core-2nd-edition-rus/#zamyikanie"
+                target="_blank" title="Дмитрий Сошников JavaScript. Ядро">тут</a>).
+              <sup class="about-me__tip"><a class="info__link" href="https://github.com/azat-io/you-dont-know-js-ru"
+                  target="_blank">
+                  вот эти ребята</a></sup>
+            </li>
+            <li>...а так же безчисленное количество статей, видео-записей с конференций по той или иной теме связанной с
+              веб-разработкой я тоже прочитал и осознал.</li>
+          </ul>
+          <p>В свободное время смотрю лекции <a class="info__link"
+              href="https://www.youtube.com/channel/UChSGI2R2kRMjzXJuYqHWQZg" target="_blank">Тимура
+              Шемсединова</a> (углубляю знания программирования в целом).
+            Стараюсь не смотреть на свой код, который был написан пару-тройку месяцев назад, но всё-равно смотрю и
+            переписываю его.
+            Это отчасти может объяснить, почему так мало работ в портфолио (потому что перфекционист). Еще в последнее
+            время чувствую непреодолимое желание научится верстать e-mail письма, но пока не хватает времени.
+            А если и осталась минутка перед сном, играю на воображаемой гитаре, которая осталась в Ярославле (мой родной
+            город), потому что ведь я еще и музыкант, но это совсем другая история...</p>
+          <p>Ниже вы можете ознакомится с моими хард-скилами:</p>
+        </div>
+        <dl class="accordeon">
+          <div class="accordeon__item">
+            <dt class="accordeon__term">
+              <button class="accordeon__button" type="button">Ключевые навыки</button>
+            </dt>
+            <dd class="accordeon__def ">
+              <div class="accordeon__def-content">
+                <div class="skill">
+                  <h3 class="skill__title">HTML</h3>
+                  <ul class="skill__list">
+                    <li class="skill__icon">
+                      <img src="img/html.svg" width="50" height="50" alt="Иконка технологии HTML">
+                      <p class="skill__desc">HTML 5</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill">
+                  <h3 class="skill__title">CSS</h3>
+                  <ul class="skill__list">
+                    <li class="skill__icon">
+                      <img src="img/css3.svg" width="50" height="50" alt="Иконка технологии CSS">
+                      <p class="skill__desc">CSS 3</p>
+                    </li>
+                    <li class="skill__icon">
+                      <img src="img/less.svg" width="50" height="50" alt="Иконка технологии LESS">
+                      <p class="skill__desc">LESS</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill">
+                  <h3 class="skill__title">Javascript</h3>
+                  <ul class="skill__list">
+                    <li class="skill__icon">
+                      <img src="img/javascript.svg" width="50" height="50" alt="Иконка технологии Javascript">
+                      <p class="skill__desc">Native Javascript</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill">
+                  <h3 class="skill__title">Build tools</h3>
+                  <ul class="skill__list">
+                    <li class="skill__icon">
+                      <img src="img/webpack.svg" width="50" height="50" alt="Иконка технологии Webpack">
+                      <p class="skill__desc">Webpack</p>
+                    </li>
+                    <li class="skill__icon">
+                      <img src="img/gulp.svg" width="50" height="50" alt="Иконка технологии Gulp">
+                      <p class="skill__desc">Gulp</p>
+                    </li>
+                  </ul>
+                </div>
+                <div class="skill">
+                  <h3 class="skill__title">Other</h3>
+                  <ul class="skill__list">
+                    <li class="skill__icon">
+                      <img src="img/github.svg" width="50" height="50" alt="Иконка системы контроля версий Github">
+                      <p class="skill__desc">Github</p>
+                    </li>
+                    <li class="skill__icon">
+                      <img src="img/npm.svg" width="50" height="50" alt="Иконка менеджера пакетов npm">
+                      <p class="skill__desc">npm</p>
+                    </li>
+                    <li class="skill__icon">
+                      <img src="img/figma.svg" width="50" height="50" alt="Иконка графического редактора Figma">
+                      <p class="skill__desc">Figma</p>
+                    </li>
+                    <li class="skill__icon">
+                      <img src="img/photoshop.svg" width="50" height="50" alt="Иконка графического редактора Photoshop">
+                      <p class="skill__desc">Photoshop</p>
+                    </li>
+                  </ul>
+                </div>
+                <p>
+                  Ещё немного деталей:
+                </p>
+                <ul class="about-me__features">
+                  <li>семантическая, валидная и кроссбраузерная вёрстка</li>
+                  <li>отзывчивая и адаптивная стилизация</li>
+                  <li>сниппеты</li>
+                  <li>адаптивные и оптимизированные изображения</li>
+                  <li>понимание модульности</li>
+                  <li>умение пользоваться препроцессором less</li>
+                  <li>умение настраивать и использовать сборщик gulp и немного webpack</li>
+                  <li>js модули, классы, наследование, асинхронность, работа с DOM</li>
+                </ul>
+              </div>
+            </dd>
+          </div>
+          <div class="accordeon__item">
+            <dt class="accordeon__term">
+              <button class="accordeon__button" type="button">Сертификаты</button>
+            </dt>
+            <dd class="accordeon__def ">
+              <div class="accordeon__def-content">
+                <ul class="certificate">
+                  <li class="certificate__item">
+                    <img src="img/css-1.jpg" width="95" height="50" alt="Изображение пройденых курсов">
+                  </li>
+                  <li class="certificate__item">
+                    <img src="img/css-2.jpg" width="95" height="50" alt="Изображение пройденых курсов">
+                  </li>
+                  <li class="certificate__item">
+                    <img src="img/js-1.jpg" width="95" height="50" alt="Изображение пройденых курсов">
+                  </li>
+                </ul>
+              </div>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </article>
+  </template>
+  <template id="tech-icon">
+    <li class="info__tech-icon">
+      <img src="img/html.svg" width="40" height="40" alt="Иконка используемой технологии">
+    </li>
+  </template>
+  <script src="js/index/data.min.js"></script>
+  <script src="js/index/generate-elements.min.js"></script>
+  <script src="js/index/render-elements.min.js"></script>
+  <script src="js/index/init.min.js"></script>
+</body>
+</html>
