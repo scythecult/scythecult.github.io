@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preload" href="fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <title>Card component</title>
+</head>
+<body class="page__body">
+  <h1 class="visually-hidden">Компонент карточки квартиры</h1>
+  <section class="flat-spec">
+    <div class="flat-spec__content _content">
+      <button class="flat-spec__close-btn" type="button">
+        <svg class="flat-spec__close-icon" width="14" height="14" aria-hidden="true" focusable="false">
+          <use href="img/icons/sprite.svg#icon-cross"></use>
+        </svg>
+        <span class="visually-hidden">Закрыть</span></button>
+      <!-- имеем ввиду, что на изображение можно нажать для увеличения-->
+      <a class="flat-spec__img-wrap" href="#">
+        <picture>
+          <source type='image/webp' srcset='img/flat-plan.webp 1x, img/flat-plan@2x.webp 2x'>
+          <img class="flat-spec__img" src="img/flat-plan.png" width="178" height="178" srcset="img/flat-plan@2x.png"
+            alt="Планировка квартиры">
+        </picture>
+      </a>
+      <div class="flat-spec__description">
+        <h2 class="flat-spec__title">2-к квартира</h2>
+        <dl class="flat-spec__info flat-info">
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Этаж</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__floor-from">3</span> из <span
+                class="flat-info__floor-to">19</span></dd>
+          </div>
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Высота потолков</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__ceiling">3,2</span> м</dd>
+          </div>
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Общая площадь</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__common">32,24</span> м²</dd>
+          </div>
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Отделка</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__finish">Предчистовая</span></dd>
+          </div>
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Жилая площадь</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__houseroom">22,24</span> м²</dd>
+          </div>
+          <div class="flat-info__wrap">
+            <dt class="flat-info__term flat-text">Площадь кухни</dt>
+            <dd class="flat-info__def flat-text-medium"><span class="flat-info__kittenroom">14,24</span> м²</dd>
+          </div>
+        </dl>
+        <ul class="flat-spec__tags">
+          <li class="flat-spec__tag flat-text flat-spec__tag--done">
+            <svg class="flat-spec__tag-icon flat-spec__tag-icon--tick" width="12" height="9" aria-hidden="true"
+              focusable="false">
+              <use href="img/icons/sprite.svg#icon-tick"></use>
+            </svg>
+            Вы были на просмотре
+          </li>
+          <li class="flat-spec__tag flat-text flat-spec__tag--undone">
+            <svg class="flat-spec__tag-icon flat-spec__tag-icon--cross" width="10" height="10" aria-hidden="true"
+              focusable="false">
+              <use href="img/icons/sprite.svg#icon-cross"></use>
+            </svg>
+            Дом аккредитован другим банком
+          </li>
+        </ul>
+      </div>
+      <div class="flat-spec__price">
+        <div class="flat-spec__price-info">
+          <p class="flat-spec__text flat-text-medium">Ваша цена по брони до <a class="flat-spec__date" href="#">19
+              сентября</a><span class="flat-spec__sum-reserve"><br>
+              3 312 666 Р</span></p>
+          <p class="flat-spec__text flat-text-medium">Текущая цена у застройщика<br> дороже на <span
+              class="flat-spec__sum-dev">324 825 Р</span>
+          </p>
+        </div>
+        <button class="flat-spec__btn order-button flat-text-medium" type="button">Выбрать для покупки</button>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
