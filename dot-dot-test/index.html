@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" href="fonts/HelveticaNeue-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
+  <link rel="stylesheet" href="css/style.min.css">
+  <title>FTL</title>
+</head>
+<body class="page__body">
+  <form class="direct-form" action="#" method="post" autocomplete="off">
+    <h1 class="visually-hidden">Форма планирования маршрута и выбора транспорта</h1>
+    <div class="direct-form__content _content">
+      <h2 class="direct-form__title">FTL: Прямая машина</h2>
+      <fieldset class="direct-form__field route">
+        <legend class="direct-form__legend legend-text"><span class="direct-form__count">1</span>Маршрут</legend>
+        <ul class="route__content">
+          <li class="route__item">
+            <label class="direct-form__label label-text" for="route-from-field">Откуда</label>
+            <input class="direct-form__input placeholder-text" type="text" name="route-from" id="route-from-field">
+          </li>
+          <li class="route__item">
+            <label class="direct-form__label label-text" for="route-to-field">Куда</label>
+            <input class="direct-form__input placeholder-text" type="text" name="route-to" id="route-to-field">
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="direct-form__field lift-capacity">
+        <legend class="direct-form__legend legend-text"><span class="direct-form__count">2</span>Транспорт</legend>
+        <ul class="lift-capacity__content">
+          <li class="lift-capacity__item">
+            <label class="direct-form__label label-text" for="lift-capacity-field">Грузоподъёмность</label>
+            <select class="direct-form__input lift-capacity__select" name="lift-capacity" id="lift-capacity-field"
+              data-select>
+              <option value="" disabled selected hidden>Не выбрана</option>
+              <option value="option-1" hidden>Вариант 1</option>
+              <option value="option-2" hidden>Вариант 2</option>
+              <option value="option-3" hidden>Вариант 3</option>
+              <option value="option-4" hidden>Вариант 4</option>
+            </select>
+          </li>
+          <li class="lift-capacity__item">
+            <label class="direct-form__label label-text" for="loading-field">Способ погрузки</label>
+            <select class="direct-form__input" name="loading" id="loading-field" data-select>
+              <option value="back" selected>Задняя</option>
+              <option value="option-2">Вариант 2</option>
+              <option value="option-3">Вариант 3</option>
+              <option value="option-4">Вариант 4</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="direct-form__field cargo">
+        <legend class="direct-form__legend legend-text"><span class="direct-form__count">3</span>Груз</legend>
+        <ul class="cargo__content">
+          <li class="cargo__type">
+            <p class="cargo__wrap cargo__wrap--type">
+              <label class="direct-form__label label-text" for="cargo-type-field">Тип груза</label>
+              <select class="direct-form__input" name="cargo-type" id="cargo-type-field" data-select>
+                <option value="" disabled selected hidden>Не выбран</option>
+                <option value="option-1">Вариант 1</option>
+                <option value="option-2">Вариант 2</option>
+                <option value="option-3">Вариант 3</option>
+                <option value="option-4">Вариант 4</option>
+              </select>
+            </p>
+            <p class="cargo__wrap cargo__wrap--danger">
+              <label class="direct-form__label label-text" for="danger-class-field">Класс опасности</label>
+              <select class="direct-form__input" name="danger-class" id="danger-class-field" data-select>
+                <option value="option-1" selected>Класс 5 — Окисляющие вещества и органические перекиси
+                </option>
+                <option value="option-2">Вариант 2</option>
+                <option value="option-3">Вариант 3</option>
+                <option value="option-4">Вариант 4</option>
+              </select>
+            </p>
+            <p class="cargo__wrap cargo__wrap--value">
+              <label class="direct-form__label label-text" for="valuation-field">Объявленная ценность, ₽</label>
+              <input class="direct-form__input" type="number" id="valuation-field" min="1" max="1000000"
+                placeholder="≥ 1">
+            </p>
+          </li>
+          <li class="cargo__temp temp-active">
+            <p class="cargo__wrap">
+              <input class="cargo__check visually-hidden" type="checkbox" name="temperature" id="temperature-field"
+                checked>
+              <label class="cargo__check-label label-text" for="temperature-field">Требуется температурный
+                режим</label>
+            </p>
+            <p class="cargo__wrap">
+              <label class="direct-form__label label-text" for="temp-from-field">От, °C</label>
+              <input class="direct-form__input" type="number" id="temp-from-field" min="-25" max="30" placeholder="-20">
+            </p>
+            <p class="cargo__wrap">
+              <label class="direct-form__label label-text" for="temp-to-field">До, °C</label>
+              <input class="direct-form__input" type="number" id="temp-to-field" min="-25" max="30" placeholder="+23">
+            </p>
+          </li>
+        </ul>
+      </fieldset>
+      <fieldset class="direct-form__field time">
+        <legend class="direct-form__legend legend-text"><span class="direct-form__count">4</span>Время</legend>
+        <ul class="time__content">
+          <li class="time__item">
+            <label class="direct-form__label time__label label-text" for="address-1-field">
+              <span class="time__title">
+                Когда прибыть на точку
+              </span>
+              <span class="time__distance">700 км
+                в день</span>
+            </label>
+            <!--класс "time__state-valid" включает подсветку кружка и бэйджа "не выбрано" -->
+            <div class="time__state time__state--valid">
+              <input class="direct-form__input time__input" type="text" id="address-1-field"
+                placeholder="Адрес не указан" required>
+            </div>
+          </li>
+          <li class="time__item">
+            <label class="direct-form__label time__label label-text" for="address-2-field">
+              <span class="time__title">
+                Когда прибыть на точку
+              </span>
+              <span class="time__distance">700 км
+                в день</span>
+            </label>
+            <div class="time__state">
+              <input class="direct-form__input time__input" type="text" id="address-2-field"
+                placeholder="Адрес не указан" required>
+            </div>
+          </li>
+          <li class="time__item time__item--textarea">
+            <label class="direct-form__label label-text" for="commentary-field">Комментарий к заказу</label>
+            <textarea class="time__textarea" name="commentary-field" id="commentary-field"
+              placeholder="Укажите особенности въезда на территорию склада или подъезда к адресу"></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <p class="direct-form__disclaimer">
+        Для расчета стоимости необходимо ввести параметры груза, пункты отправки и прибытия.
+      </p>
+    </div>
+  </form>
+  <script src="js/bundle.js"></script>
+</body>
+</html>
