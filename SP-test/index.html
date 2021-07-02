@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Front-end by sborkaproject.com -->
+    <meta charset="utf-8" />
+    <title>
+        Project </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <script type="text/javascript">!function(){function e(e){return r.indexOf(e)>-1}function o(e){return a.indexOf(e)>-1}function n(e){return s.indexOf(e)>-1}var i=[],t=navigator,r=t.platform.toLowerCase(),a=t.userAgent.toLowerCase(),s=t.appName.toLowerCase(),d=document.documentElement,c=(localStorage,o("iphone")||o("ipod")||o("ipad")||o("android")||o("iemobile")||o("blackberry")||o("bada")?"_mobile":"_desktop");i.push(c);var m="";o("ipad")||o("iphone")||o("ipod")?m="_ios":o("android")?m="_android":e("win")?m="_win":e("mac")?m="_mac":e("linux")&&(m="_linux"),i.push(m);var u="";o("firefox")?u="_ff":o("opr")?u="_opera":o("yabrowser")?u="_yandex":o("edge")?u="_edge":o("trident")||n("explorer")||n("msie")?u="_ie":o("safari")&&!o("chrome")?u="_safari":o("chrome")&&(u="_chrome"),i.push(u),window.environmentObject={platform:c,os:m,browser:u,isLocal:0==window.location.href.indexOf("http://localhost:")},d.className+=" "+i.join(" ");var l=new XMLHttpRequest;l.open("GET","assets/svg/sprite.svg",!0),l.overrideMimeType("image/svg+xml"),l.onreadystatechange=function(){function e(){if(document.body){var o=document.querySelector(".invisible-container");o||(o=document.createElement("div"),o.className="invisible-container",document.body.insertBefore(o,document.body.firstChild)),o.appendChild(l.responseXML.documentElement)}else setTimeout(e,16)}l.readyState===XMLHttpRequest.DONE&&200===l.status&&e()},l.send("")}();</script>
+
+    <link rel="preload" href="assets/fonts/Roboto-Regular.woff2" as="font" crossorigin="anonymous" type="font/woff2">
+    <link rel="preload" href="assets/fonts/Roboto-Medium.woff2" as="font" crossorigin="anonymous" type="font/woff2">
+    <link rel="stylesheet" href="assets/css/styles.css?1ea609b9cd75b2f8f129691ff2d5087f" />
+</head>
+
+<body>
+    <header class="header">
+        <div class="header__content">
+            <nav class="header__nav">
+                <!-- предпологаем, что клик по ссылке с логотипом может вести на другую страницу -->
+                <a class="header__logo-link logo" href="#">
+                    <img class="logo__image" src="assets/images/header-logo.svg" alt="SP.shop logo">
+                </a>
+                <ul class="header__site-list site-list" id="site-list">
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Women’s</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Men’s</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Home</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Travel</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Beauty</a>
+                    </li>
+                    <li class="site-list__item">
+                        <a class="site-list__link" href="#">Sale</a>
+                    </li>
+                </ul>
+
+                <ul class="header__user-actions user-actions">
+                    <li class="user-actions__item user-actions__item--search">
+                        <a class="user-actions__link" href="#" aria-label="Toggle site search">
+                            <svg class="user-actions__icon">
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="user-actions__item user-actions__item--basket">
+                        <a class="user-actions__link" href="#" aria-label="Toggle shop basket">
+                            <svg class="user-actions__icon">
+                                <use xlink:href="#icon-cart"></use>
+                            </svg>
+                            <span class="user-actions__basket-counter user-actions__basket-counter--shown">1</span>
+                        </a>
+
+                    </li>
+                    <li class="user-actions__item user-actions__item--nav">
+                        <button class="user-actions__toggle-nav-button" type="button" aria-label="Toggle navigation menu" aria-controls="site-list">
+                            <svg class="user-actions__icon">
+                                <use xlink:href="#icon-menu"></use>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main class="order">
+        <h2 class="visually-hidden">Billing Info</h2>
+        <section class="billing">
+            <ul class="order__pagination pagination">
+                <li class="pagination__item ">
+                    <a class="pagination__link" href="#" data-step="account" aria-label="to account"></a>
+                </li>
+                <li class="pagination__item ">
+                    <a class="pagination__link" href="#" data-step="shipping" aria-label="to shipping"></a>
+                </li>
+                <li class="pagination__item pagination__item--current">
+                    <a class="pagination__link" href="#" data-step="billing" aria-label="to billing"></a>
+                </li>
+                <li class="pagination__item ">
+                    <a class="pagination__link" href="#" data-step="review" aria-label="to review"></a>
+                </li>
+            </ul>
+
+            <div class="billing__info">
+                <h3 class="billing__title order__subtitle">Billing Information
+                </h3>
+                <form class="billing__form info-form" action="#" method="post" autocomplete="off">
+                    <fieldset class="info-form__field pay-methods">
+                        <ul class="pay-methods__list">
+                            <li class="pay-methods__item">
+                                <input class="pay-methods__input visually-hidden" name="pay-method" value="credit-card" id="credit-radio" type="radio" checked>
+                                <label class="pay-methods__label" for="credit-radio">Pay with
+                                    Credit Card</label>
+                            </li>
+                            <li class="pay-methods__item">
+                                <input class="pay-methods__input visually-hidden" name="pay-method" value="pay-pal" id="paypal-radio" type="radio">
+                                <label class="pay-methods__label pay-methods__label--paypal" for="paypal-radio">
+                                    <span class="visually-hidden">Pay with PayPal</span></label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="info-form__field credit-card">
+                        <ul class="credit-card__list">
+                            <li class="credit-card__item">
+                                <label class="credit-card__label" for="name-field">Name on
+                                    card</label>
+                                <input class="credit-card__input" type="text" id="name-field" minlength="2" placeholder="Placeholder Text" required>
+                            </li>
+                            <li class="credit-card__item">
+                                <fieldset class="credit-card__number">
+                                    <label class="credit-card__label" for="card-number">Card
+                                        number</label>
+                                    <div class="credit-card__number-wrap">
+                                        <input class="credit-card__input credit-card__input--number" id="card-number" type="number">
+                                        <input class="credit-card__input credit-card__input--number" type="number">
+                                        <input class="credit-card__input credit-card__input--number" type="number">
+                                        <input class="credit-card__input credit-card__input--number" type="number">
+                                    </div>
+                                </fieldset>
+                            </li>
+                            <li class="credit-card__item">
+                                <fieldset class="credit-card__add">
+                                    <ul class="credit-card__add-items">
+                                        <li class="credit-card__add-wrap">
+                                            <label class="credit-card__label" for="exp-field">Expire
+                                                date</label>
+                                            <input class="credit-card__input credit-card__input--add" type="text" id="exp-field" maxlength="5">
+                                        </li>
+                                        <li class="credit-card__add-wrap">
+                                            <label class="credit-card__label credit-card__label--cvv" for="cvv-field" data-cvv-info="The CVV Number (Card Verification Value) on your credit card or debit card is a 3 digit number">CVV
+                                                code</label>
+                                            <input class="credit-card__input credit-card__input--add" type="number" id="cvv-field">
+                                        </li>
+                                    </ul>
+                                </fieldset>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <fieldset class="info-form__field terms">
+                        <ul class="terms__list">
+                            <li class="terms__item">
+                                <input class="terms__check visually-hidden" id="save-check" type="checkbox" checked>
+                                <label class="terms__label" for="save-check">Save
+                                    information of this credit card</label>
+                            </li>
+                            <li class="terms__item">
+                                <input class="terms__check visually-hidden" id="policy-check" type="checkbox">
+                                <label class="terms__label" for="policy-check">I
+                                    accept the <a class="terms__policy-link" href="#">terms
+                                        and comditions</a> and the <a class="terms__policy-link" href="#">Privacy
+                                        Policies</a>
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    <div class="info-form__footer">
+                        <a class="info-form__back-button page-button" href="#">Back</a>
+                        <button class="info-form__submit-button page-button" type="submit">Check
+                            Out</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <div class="order__aside">
+            <section class="basket-info">
+                <div class="basket-info__content">
+                    <h3 class="basket-info__title order__subtitle">My basket</h3>
+                    <ul class="basket-info__items">
+                        <li class="basket-card">
+                            <a class="basket-card__image-link" href="#">
+                                <picture>
+                                    <img class="basket-card__image" src="assets/images/basket-card/1.png" srcset="assets/images/basket-card/1@2x.png 2x" width="100" height="100" alt="Good description">
+                                </picture>
+                            </a>
+                            <div class="basket-card__desc">
+                                <p class="basket-card__good-info">
+                                    Amet minim mollit non deserunt ullamco est sit
+                                </p>
+                                <button class="basket-card__remove-button" type="button" aria-label="Remove good from basket"></button>
+                                <div class="basket-card__price">
+                                    <div class="basket-card__counter">
+                                        <button class="basket-card__count-button basket-card__count-button--dec" type="button" aria-label="Subtract" data-operation="dec"></button>
+                                        <span class="basket-card__item-count">1</span>
+                                        <button class="basket-card__count-button basket-card__count-button--inc" type="button" aria-label="Add" data-operation="inc"></button>
+                                    </div>
+                                    <span class="basket-card__total-price" data-price="525">$525</span>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="basket-card">
+                            <a class="basket-card__image-link" href="#">
+                                <picture>
+                                    <img class="basket-card__image" src="assets/images/basket-card/2.png" srcset="assets/images/basket-card/2@2x.png 2x" width="100" height="100" alt="Good description">
+                                </picture>
+                            </a>
+                            <div class="basket-card__desc">
+                                <p class="basket-card__good-info">
+                                    Amet minim mollit non
+                                </p>
+                                <button class="basket-card__remove-button" type="button" aria-label="Remove good from basket"></button>
+                                <div class="basket-card__price">
+                                    <div class="basket-card__counter">
+                                        <button class="basket-card__count-button basket-card__count-button--dec" type="button" aria-label="Subtract" data-operation="dec"></button>
+                                        <span class="basket-card__item-count">1</span>
+                                        <button class="basket-card__count-button basket-card__count-button--inc" type="button" aria-label="Add" data-operation="inc"></button>
+                                    </div>
+                                    <span class="basket-card__total-price" data-price="525">$525</span>
+                                </div>
+                            </div>
+                        </li>
+
+                    </ul>
+                </div>
+            </section>
+            <section class="promo-code">
+                <div class="promo-code__content">
+                    <h2 class="promo-code__title order__subtitle">Promo code</h2>
+                    <form class="promo-code__form" action="#" method="post" autocomplete="off">
+                        <input class="promo-code__input" type="text" name="promo-code" placeholder="Placeholder Text">
+                        <button class="promo-code__apply-button page-button" type="submit">Apply</button>
+                    </form>
+                </div>
+            </section>
+            <section class="pay-info">
+                <div class="pay-info__content">
+                    <h2 class="visually-hidden">Pay info</h2>
+                    <dl class="pay-info__list">
+                        <div class="pay-info__item">
+                            <dt class="pay-info__term">Subtotal</dt>
+                            <dd class="pay-info__def pay-info__def--subtotal">$1050</dd>
+                        </div>
+                        <div class="pay-info__item">
+                            <dt class="pay-info__term">Tax</dt>
+                            <dd class="pay-info__def pay-info__def--tax">$100</dd>
+                        </div>
+                        <div class="pay-info__item">
+                            <dt class="pay-info__term">Shipping</dt>
+                            <dd class="pay-info__def pay-info__def--shipping">$150</dd>
+                        </div>
+                        <div class="pay-info__item">
+                            <dt class="pay-info__term pay-info__term--total">Total</dt>
+                            <dd class="pay-info__def pay-info__def--total">$1 300</dd>
+                        </div>
+                    </dl>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="assets/js/bundle.js"></script>
+</body>
+
+</html>
